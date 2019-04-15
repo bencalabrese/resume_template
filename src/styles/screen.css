@@ -1,0 +1,8 @@
+body {
+  background-color: darkorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 12in;
+  min-width: 9.5in;
+}
