@@ -6,7 +6,7 @@ main {
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 2.25in 1.125in auto;
+  grid-template-columns: 2.25in 1in auto;
   grid-template-rows: 0.853in 0.667in auto;
   grid-template-areas:
     "title      title   chevrons"
@@ -16,18 +16,24 @@ main {
 }
 
 .enclosure {
-  border: 5px solid lightgrey;
+  border: 4px solid lightgrey;
   border-radius: 15px;
+  padding: 0.125in;
 }
 
 .title {
   grid-area: title;
 }
 
+.subtitle {
+  color: lightgray;
+  padding-left: 0.25in;
+}
+
 .chevrons {
   grid-area: chevrons;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .profile-label {
@@ -38,6 +44,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 36px;
 }
 
 .quick-hits {
