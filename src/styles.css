@@ -1,3 +1,14 @@
 body {
   background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 12in;
+  min-width: 9.5in;
+}
+
+main {
+  width: 8.5in;
+  height: 11in;
+  background-color: white;
 }
