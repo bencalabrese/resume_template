@@ -13,7 +13,11 @@
   "author": "Ben Calabrese",
   "devDependencies": {
     "html-webpack-plugin": "^2.29.0",
-    "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack": "^4.29.0",
+    "webpack-dev-server": "^3.1.14",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "webpack-cli": "^3.2.1"
   }
 }
