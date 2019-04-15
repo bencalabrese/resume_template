@@ -2,4 +2,49 @@ main {
   width: 8.5in;
   height: 11in;
   background-color: white;
+  padding: 1in;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 2.25in 1.125in auto;
+  grid-template-rows: 0.853in 0.667in auto;
+  grid-template-areas:
+    "title      title   chevrons"
+    "profile    history history"
+    "quick-hits history history";
+  grid-gap: 0.25in;
+}
+
+.enclosure {
+  border: 5px solid lightgrey;
+  border-radius: 15px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.chevrons {
+  grid-area: chevrons;
+  display: flex;
+  justify-content: space-between
+}
+
+.profile-label {
+  grid-area: profile;
+  background-color: darkorange;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-hits {
+  grid-area: quick-hits;
+  text-align: right;
+}
+
+.history {
+  grid-area: history;
 }
