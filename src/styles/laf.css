@@ -3,7 +3,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: dimgray;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.125;
 }
 
 h1,
@@ -30,4 +31,16 @@ h2 {
 
 h3 {
   font-size: 16px;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+.extra-spacing {
+  line-height: 1.5;
+}
+
+.italics {
+  font-style: italic;
 }
