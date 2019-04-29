@@ -18,11 +18,19 @@ module.exports = {
     contentBase: join(__dirname, "src"),
     watchContentBase: true
   },
+  module: {
+    loaders: [
+      {
+        test: /\.hbs$/,
+        loader: "handlebars-loader"
+      }
+    ]
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: "index.ejs",
+      template: "index.hbs",
       templateParameters: { foo: "bar" }
     })
   ]
