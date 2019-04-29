@@ -1,5 +1,5 @@
-import * as templateParameters from "../templateParameters";
+import params from "../templateParams";
 
 export default function(options) {
-  return options.fn(templateParameters);
+  return options.fn(params);
 }
