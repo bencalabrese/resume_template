@@ -22,7 +22,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: "index.html"
+      template: "index.ejs",
+      templateParameters: { foo: "bar" }
     })
   ]
 };
