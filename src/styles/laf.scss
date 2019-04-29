@@ -31,13 +31,15 @@ h2 {
 
 h3 {
   font-size: 16px;
+  margin-bottom: 0.125in;
 }
 
 h4 {
   font-size: 13px;
+  margin: 0.0875in 0;
 }
 
-ul {
+.history ul {
   list-style: square inside;
   text-indent: -1.5em;
   padding-left: 1.5em;

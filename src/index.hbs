@@ -18,8 +18,10 @@
       <img src="assets/trailing_chevron.svg" />
       <img src="assets/trailing_chevron.svg" />
     </section>
+
     <h2 class="profile-label foo">Profile</h2>
-    <section class="quick-hits enclosure">
+
+    <section class="profile enclosure">
       <section class="contact extra-spacing">
         <p>(619) 208-8943</p>
         <p>bencalabrese@gmail.com</p>
@@ -35,40 +37,11 @@
 
       <section class="skills">
         <h3>Skills</h3>
-        <table class="extra-spacing">
-          <tr>
-            <td>Dart</td>
-            <td>AngularDart</td>
-          </tr>
-          <tr>
-            <td>Typescript</td>
-            <td>Python</td>
-          </tr>
-          <tr>
-            <td>SQL</td>
-            <td>Ruby</td>
-          </tr>
-          <tr>
-            <td>Git</td>
-            <td>Rails</td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td>Javascript</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>jQuery</td>
-          </tr>
-          <tr>
-            <td>Flux</td>
-            <td>React</td>
-          </tr>
-          <tr>
-            <td>C</td>
-            <td>Sass</td>
-          </tr>
-        </table>
+        <ul class="extra-spacing">
+          {{#each skills}}
+          <li>{{name}}</li>
+          {{/each}}
+        </ul>
       </section>
 
       <div class="divider"></div>

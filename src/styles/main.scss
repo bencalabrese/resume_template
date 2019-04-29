@@ -9,9 +9,9 @@ main {
   grid-template-columns: 2.25in 1in auto;
   grid-template-rows: 0.853in 0.667in auto;
   grid-template-areas:
-    "title      title   chevrons"
-    "profile    history history"
-    "quick-hits history history";
+    "title         title   chevrons"
+    "profile-label history history"
+    "profile       history history";
   grid-gap: 0.25in;
 }
 
@@ -37,7 +37,7 @@ main {
 }
 
 .profile-label {
-  grid-area: profile;
+  grid-area: profile-label;
   background-color: darkorange;
   color: white;
   border-radius: 15px;
@@ -47,9 +47,14 @@ main {
   font-size: 36px;
 }
 
-.quick-hits {
-  grid-area: quick-hits;
+.profile {
+  grid-area: profile;
   text-align: right;
+
+  .skills ul {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 
 .history {
@@ -61,18 +66,6 @@ main {
   height: 2px;
   width: auto;
   margin: 0.125in 0;
-}
-
-table {
-  width: 100%;
-}
-
-.quick-hits h3 {
-  margin-bottom: 0.125in;
-}
-
-.quick-hits h4 {
-  margin: 0.0875in 0;
 }
 
 .history-chunk header {
