@@ -22,7 +22,10 @@ module.exports = {
     loaders: [
       {
         test: /\.hbs$/,
-        loader: "handlebars-loader"
+        loader: "handlebars-loader",
+        query: {
+          helperDirs: [join(__dirname, "src/helpers")]
+        }
       }
     ]
   },
@@ -30,8 +33,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: "index.hbs",
-      templateParameters: { foo: "bar" }
+      template: "index.hbs"
     })
   ]
 };

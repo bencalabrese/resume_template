@@ -1,4 +1,4 @@
-{{#with htmlWebpackPlugin.options.templateParameters}}
+{{#withParams}}
 <!DOCTYPE html>
 
 <head>
@@ -10,7 +10,7 @@
   <main>
     <section class="title">
       <h1>
-        {{ foo }}
+        {{ name }}
       </h1>
       <h2 class="subtitle">Web Developer</h2>
     </section>
@@ -119,4 +119,4 @@
     </section>
   </main>
 </body>
-{{/with}}
+{{/withParams}}
