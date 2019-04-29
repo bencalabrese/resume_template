@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const { join, resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   context: resolve(__dirname, "src"),
@@ -19,21 +20,38 @@ module.exports = {
     watchContentBase: true
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.hbs$/,
-        loader: "handlebars-loader",
-        query: {
-          helperDirs: [join(__dirname, "src/helpers")]
-        }
+        use: [
+          {
+            loader: "handlebars-loader",
+            options: {
+              helperDirs: [join(__dirname, "src", "helpers")]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: { implementation: require("sass") }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      inject: true,
-      template: "index.hbs"
-    })
+      template: "index.hbs",
+      title: "Ben Calabrese Resume"
+    }),
+    new MiniCssExtractPlugin()
   ]
 };

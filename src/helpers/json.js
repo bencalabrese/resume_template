@@ -1,3 +1,3 @@
 export default function(object) {
-  return Object.keys(object);
+  return JSON.stringify(object);
 }
