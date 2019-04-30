@@ -4,12 +4,11 @@
     opacity: 0.3;
   }
 
-  75% {
+  70% {
     opacity: 1;
   }
 }
 
 @mixin in-out($delay) {
-  animation: in-out 2s infinite;
-  animation-delay: $delay;
+  animation: in-out 2s ease-out $delay infinite;
 }
