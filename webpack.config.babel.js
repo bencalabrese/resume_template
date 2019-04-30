@@ -50,8 +50,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: "index.hbs",
-      title: "Ben Calabrese Resume"
+      template: "index.hbs"
     }),
     new MiniCssExtractPlugin()
   ]
