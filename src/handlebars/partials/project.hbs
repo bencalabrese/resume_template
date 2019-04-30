@@ -1,0 +1,16 @@
+<section class="history-chunk">
+    <header class="subheader">
+        <h4>{{name}}</h4>
+        <span class="links">
+            <a target="blank" href="{{liveLink}}">Live</a>
+            &nbsp;|&nbsp;
+            <a target="blank" href="{{repoLink}}">GitHub</a>
+        </span>
+    </header>
+    <p class="description">{{description}}</p>
+    <ul>
+        {{#each bullets as |bullet|}}
+        <li>{{bullet}}</li>
+        {{/each}}
+    </ul>
+</section>

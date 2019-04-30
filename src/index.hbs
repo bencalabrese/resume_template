@@ -22,72 +22,30 @@
     <h2 class="profile-label foo">Profile</h2>
 
     <section class="profile enclosure">
-      <section class="contact extra-spacing">
-        <p>(619) 208-8943</p>
-        <p>bencalabrese@gmail.com</p>
-        <p>San Francisco, CA</p>
-        <div class="profile-links">
-          <div>Portfolio</div>
-          <div>GitHub</div>
-          <div>LinkedIn</div>
-        </div>
-      </section>
-
+      {{> contact contact}}
       <div class="divider"></div>
 
       <section class="skills">
-        <h3>Skills</h3>
+        <h3 class="subheader">Skills</h3>
         <ul class="extra-spacing">
-          {{#each skills}}
-          <li>{{name}}</li>
+          {{#each skills as |skill|}}
+          {{>skill skill}}
           {{/each}}
         </ul>
       </section>
-
       <div class="divider"></div>
 
       <section class="education">
-        <h3>Education</h3>
-        <h4>App Academy</h4>
-        <div>
-          <p class="extra-spacing">May 2016</p>
-          <p class="italics">
-            1000 hour-coding school with &lt;5% acceptance rate
-          </p>
-          <br />
-          <p>
-            Coursework includes: Rails, TDD, OOP, single-page apps, coding
-            style, scalability, algorithms, best practices
-          </p>
-        </div>
-        <h4>S.F. State University</h4>
-        <div class="extra-spacing">
-          <p>B.A. Drama, May 2013</p>
-          <p>GPA 3.86</p>
-        </div>
+        <h3 class="subheader">Education</h3>
+        {{>appAcademy}}
+        {{>sfState}}
       </section>
     </section>
     <section class="history enclosure">
       <h3>Projects</h3>
-      <section class="history-chunk">
-        <header>
-          <h4>PickupTix</h4>
-          <span class="links"><a>Live</a> | <a>GitHub</a></span>
-        </header>
-        <p class="description">
-          Full stack event ticketing app built in Rails and React
-        </p>
-        <ul>
-          <li>
-            Build a dynamic show filter using ActiveRecord to run a single
-            efficient SQL query across multiple criteria
-          </li>
-          <li>
-            Mapped JSON data to build interactive seat picker for more engaging
-            point-and-click UI
-          </li>
-        </ul>
-      </section>
+      {{#each projects as |project|}}
+      {{>project project}}
+      {{/each}}
     </section>
   </main>
 </body>

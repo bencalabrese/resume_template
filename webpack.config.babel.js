@@ -27,7 +27,8 @@ module.exports = {
           {
             loader: "handlebars-loader",
             options: {
-              helperDirs: [join(__dirname, "src", "helpers")]
+              helperDirs: [join(__dirname, "src", "handlebars", "helpers")],
+              partialDirs: [join(__dirname, "src", "handlebars", "partials")]
             }
           }
         ]
