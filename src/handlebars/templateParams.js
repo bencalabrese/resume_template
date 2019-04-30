@@ -39,10 +39,8 @@ export default {
       name: "App Academy",
       descriptors: ["Engineering Apprentice", "May 2016–July 2016"],
       bullets: [
-        "Crafted new Ruby and Javascript curriculum and RSpec" +
-          "testing suites",
-        "Completed systems programming course, working in C " +
-          "to create hand-rolled shell interface"
+        "Crafted new Ruby and Javascript curriculum and RSpec " +
+          "testing suites"
       ]
     }
   ],
@@ -58,7 +56,7 @@ export default {
       ],
       descriptors: ["Conway's Game of Life simulator built in Javascript"],
       bullets: [
-        "Implemented HTML5 canvas rendering with controls for" +
+        "Implemented HTML5 canvas rendering with controls for " +
           "pan, zoom, and adjusting cycle speed",
         "Bound UI events in jQuery for user manipulation of grid"
       ]
@@ -84,7 +82,7 @@ export default {
       descriptors: ["Lightweight Rails replica built in Ruby"],
       bullets: [
         "Hand-rolled ORM with built-in SQL query methods",
-        "Constructed router, views, and controllers to create" +
+        "Constructed router, views, and controllers to create " +
           "fully RESTful apps serving ERB templates"
       ]
     }
