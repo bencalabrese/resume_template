@@ -28,7 +28,12 @@ export default {
     {
       name: "Google",
       descriptors: ["Software Engineer", "Sept. 2016–Present"],
-      bullets: ["A", "B", "C"]
+      bullets: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet."
+      ]
     },
     {
       name: "App Academy",
@@ -36,8 +41,8 @@ export default {
       bullets: [
         "Crafted new Ruby and Javascript curriculum and RSpec" +
           "testing suites",
-        "Completed systems programming course, working in C" +
-          "to create hand - rolled shell interface"
+        "Completed systems programming course, working in C " +
+          "to create hand-rolled shell interface"
       ]
     }
   ],
