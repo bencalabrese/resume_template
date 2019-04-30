@@ -28,10 +28,16 @@ export default {
     {
       name: "Google",
       descriptors: ["Software Engineer", "Sept. 2016–Present"],
+      bullets: ["A", "B", "C"]
+    },
+    {
+      name: "App Academy",
+      descriptors: ["Engineering Apprentice", "May 2016–July 2016"],
       bullets: [
-        "Implemented HTML5 canvas rendering with controls for" +
-          "pan, zoom, and adjusting cycle speed",
-        "Bound UI events in jQuery for user manipulation of grid"
+        "Crafted new Ruby and Javascript curriculum and RSpec" +
+          "testing suites",
+        "Completed systems programming course, working in C" +
+          "to create hand - rolled shell interface"
       ]
     }
   ],
@@ -62,7 +68,7 @@ export default {
         "Build a dynamic show filter using ActiveRecord to run a single " +
           "efficient SQL query across multiple criteria",
         "Mapped JSON data to build interactive seat picker for more engaging " +
-          "point - and - click UI"
+          "point-and-click UI"
       ]
     },
     {
