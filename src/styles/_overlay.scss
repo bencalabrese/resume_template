@@ -1,7 +1,6 @@
 @import "animations/inOut";
 
 .overlay {
-  padding: 0.125in 0.25in;
   position: absolute;
   opacity: 0;
   top: 0;
@@ -17,6 +16,7 @@
 
 .has-overlay {
   position: relative;
+  box-sizing: border-box;
 
   > * {
     transition: 1s;
