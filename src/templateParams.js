@@ -27,8 +27,8 @@ export default {
   projects: [
     {
       name: "Constellations",
-      liveLink: "http://www.google.com",
-      repoLink: "http://www.google.com",
+      liveLink: "http://bencalabrese.com/Constellations/",
+      repoLink: "https://github.com/bencalabrese/Constellations",
       description: "Conway's Game of Life simulator built in Javascript",
       bullets: [
         "Implemented HTML5 canvas rendering with controls for" +
@@ -38,7 +38,7 @@ export default {
     },
     {
       name: "PickupTix",
-      repoLink: "http://www.google.com",
+      repoLink: "https://github.com/bencalabrese/pickup_tix/",
       description: "Fullstack event ticketing app built in Rails and React",
       bullets: [
         "Build a dynamic show filter using ActiveRecord to run a single " +
@@ -49,7 +49,7 @@ export default {
     },
     {
       name: "Snails",
-      repoLink: "http://www.google.com",
+      repoLink: "https://github.com/bencalabrese/Snails",
       description: "Lightweight Rails replica built in Ruby",
       bullets: [
         "Hand-rolled ORM with built-in SQL query methods",
