@@ -1,0 +1,8 @@
+.profile {
+  text-align: right;
+
+  .skills ul {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}

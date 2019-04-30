@@ -38,18 +38,6 @@ h4 {
   font-size: 13px;
 }
 
-.history-chunk {
-  ul {
-    list-style: square inside;
-    text-indent: -1.5em;
-    padding-left: 1.5em;
-  }
-
-  li {
-    line-height: 1.25em;
-  }
-}
-
 .subheader {
   margin-bottom: 0.025in;
 
@@ -57,10 +45,24 @@ h4 {
     margin-top: 0.125in;
   }
 }
+
 .extra-spacing {
   line-height: 1.5;
 }
 
 .italics {
   font-style: italic;
+}
+
+.divider {
+  background-color: darkorange;
+  height: 2px;
+  width: auto;
+  margin: 0.125in 0;
+}
+
+.enclosure {
+  border: 4px solid lightgrey;
+  border-radius: 15px;
+  padding: 0.25in;
 }
