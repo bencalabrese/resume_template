@@ -1,13 +1,14 @@
 <section class="history-chunk">
     <header class="subheader">
         <h4>{{name}}</h4>
-        <span class="links">
-            {{#if liveLink}}
-                <a target="blank" href="{{liveLink}}">Live</a>
-                &nbsp;|&nbsp;
-            {{/if}}
-            <a target="blank" href="{{repoLink}}">GitHub</a>
-        </span>
+        {{#if links}}
+            <span class="links">
+                {{#each links}}
+                    <a target="blank" href="{{url}}">{{name}}</a>
+                    {{#unless @last}}&nbsp;|&nbsp;{{/unless}}
+                {{/each}}
+            </span>
+        {{/if}}
     </header>
     <p class="description italics">{{description}}</p>
     <ul>
