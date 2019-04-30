@@ -22,7 +22,10 @@
       <h2 class="profile-label foo">Profile</h2>
 
       <section class="profile enclosure">
-        {{> contact contact}}
+        <section class="contact extra-spacing has-overlay">
+          {{> overlay }}
+          {{> contact contact}}
+        </section>
 
         <div class="divider"></div>
 
@@ -38,7 +41,8 @@
 
         <div class="divider"></div>
 
-        <section class="education">
+        <section class="education has-overlay">
+          {{> overlay}}
           <h3>Education</h3>
           {{>appAcademy}}
           {{>sfState}}
