@@ -26,8 +26,18 @@ export default {
   ],
   projects: [
     {
-      name: "PickupTix",
+      name: "Constellations",
       liveLink: "http://www.google.com",
+      repoLink: "http://www.google.com",
+      description: "Conway's Game of Life simulator built in Javascript",
+      bullets: [
+        "Implemented HTML5 canvas rendering with controls for" +
+          "pan, zoom, and adjusting cycle speed",
+        "Bound UI events in jQuery for user manipulation of grid"
+      ]
+    },
+    {
+      name: "PickupTix",
       repoLink: "http://www.google.com",
       description: "Fullstack event ticketing app built in Rails and React",
       bullets: [
@@ -35,6 +45,16 @@ export default {
           "efficient SQL query across multiple criteria",
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point - and - click UI"
+      ]
+    },
+    {
+      name: "Snails",
+      repoLink: "http://www.google.com",
+      description: "Lightweight Rails replica built in Ruby",
+      bullets: [
+        "Hand-rolled ORM with built-in SQL query methods",
+        "Constructed router, views, and controllers to create" +
+          "fully RESTful apps serving ERB templates"
       ]
     }
   ]

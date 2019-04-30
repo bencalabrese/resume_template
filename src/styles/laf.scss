@@ -31,21 +31,23 @@ h2 {
 
 h3 {
   font-size: 16px;
-  margin-bottom: 0.125in;
+  margin: 0.0875in 0;
 }
 
 h4 {
   font-size: 13px;
 }
 
-.subheader {
-  margin: 0.0875in 0;
-}
+.history-chunk {
+  ul {
+    list-style: square inside;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }
 
-.history ul {
-  list-style: square inside;
-  text-indent: -1.5em;
-  padding-left: 1.5em;
+  .subheader {
+    margin: 0.125in 0 0.025in;
+  }
 }
 
 .extra-spacing {
