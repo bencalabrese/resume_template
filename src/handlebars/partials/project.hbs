@@ -3,8 +3,8 @@
         <h4>{{name}}</h4>
         <span class="links">
             {{#if liveLink}}
-            <a target="blank" href="{{liveLink}}">Live</a>
-            &nbsp;|&nbsp;
+                <a target="blank" href="{{liveLink}}">Live</a>
+                &nbsp;|&nbsp;
             {{/if}}
             <a target="blank" href="{{repoLink}}">GitHub</a>
         </span>
@@ -12,7 +12,7 @@
     <p class="description">{{description}}</p>
     <ul>
         {{#each bullets as |bullet|}}
-        <li>{{bullet}}</li>
+            <li>{{bullet}}</li>
         {{/each}}
     </ul>
 </section>

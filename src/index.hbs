@@ -1,52 +1,54 @@
 {{#withParams}}
-<!DOCTYPE html>
+  <!DOCTYPE html>
 
-<head>
-  <title>Ben Calabrese Resume</title>
-</head>
+  <head>
+    <title>Ben Calabrese Resume</title>
+  </head>
 
-<body>
-  <main>
-    <section class="title">
-      <h1>
-        {{ name }}
-      </h1>
-      <h2 class="subtitle">Web Developer</h2>
-    </section>
-    <section class="chevrons">
-      <img src="assets/leading_chevron.svg" />
-      <img src="assets/trailing_chevron.svg" />
-      <img src="assets/trailing_chevron.svg" />
-    </section>
+  <body>
+    <main>
+      <section class="title">
+        <h1>
+          {{ name }}
+        </h1>
+        <h2 class="subtitle">Web Developer</h2>
+      </section>
+      <section class="chevrons">
+        <img src="assets/leading_chevron.svg" />
+        <img src="assets/trailing_chevron.svg" />
+        <img src="assets/trailing_chevron.svg" />
+      </section>
 
-    <h2 class="profile-label foo">Profile</h2>
+      <h2 class="profile-label foo">Profile</h2>
 
-    <section class="profile enclosure">
-      {{> contact contact}}
-      <div class="divider"></div>
+      <section class="profile enclosure">
+        {{> contact contact}}
+        <div class="divider"></div>
 
-      <section class="skills">
-        <h3>Skills</h3>
-        <ul class="extra-spacing">
-          {{#each skills as |skill|}}
-          {{>skill skill}}
+        <section class="skills">
+          <h3>Skills</h3>
+          <ul class="extra-spacing">
+            {{#each skills as |skill|}}
+              {{>skill skill}}
+            {{/each}}
+          </ul>
+        </section>
+        <div class="divider"></div>
+
+        <section class="education">
+          <h3>Education</h3>
+          {{>appAcademy}}
+          {{>sfState}}
+        </section>
+      </section>
+      <section class="history enclosure">
+        <section class="projects">
+          <h3>Projects</h3>
+          {{#each projects as |project|}}
+            {{>project project}}
           {{/each}}
-        </ul>
+        </section>
       </section>
-      <div class="divider"></div>
-
-      <section class="education">
-        <h3>Education</h3>
-        {{>appAcademy}}
-        {{>sfState}}
-      </section>
-    </section>
-    <section class="history enclosure">
-      <h3>Projects</h3>
-      {{#each projects as |project|}}
-      {{>project project}}
-      {{/each}}
-    </section>
-  </main>
-</body>
+    </main>
+  </body>
 {{/withParams}}
