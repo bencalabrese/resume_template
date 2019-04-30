@@ -10,7 +10,11 @@
             </span>
         {{/if}}
     </header>
-    <p class="description italics">{{description}}</p>
+    <p class="description italics">
+        {{#each descriptors as |descriptor|}}
+            <span>{{descriptor}}</span>
+        {{/each}}
+    </p>
     <ul>
         {{#each bullets as |bullet|}}
             <li>{{bullet}}</li>

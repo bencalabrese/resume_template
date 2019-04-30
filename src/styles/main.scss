@@ -76,5 +76,7 @@ main {
 
   .description {
     padding-left: 0.75em;
+    display: flex;
+    justify-content: space-between;
   }
 }
