@@ -46,6 +46,23 @@ export default {
   ],
   projects: [
     {
+      name: "Resume",
+      links: [
+        { name: "Live", url: "http://bencalabrese.com/resume" },
+        {
+          name: "GitHub",
+          url: "https://github.com/bencalabrese/resume_template"
+        }
+      ],
+      descriptors: ["You're reading it!"],
+      bullets: [
+        "Nearly pure HTML/CSS with a little jQuery",
+        "Animations and click events for the web while still styled for print",
+        "Parameterized for easy editing and different versions: one for " +
+          "projects I can talk about publicly and another for secret projects"
+      ]
+    },
+    {
       name: "Constellations",
       links: [
         { name: "Live", url: "http://bencalabrese.com/Constellations/" },
@@ -72,18 +89,6 @@ export default {
           "efficient SQL query across multiple criteria",
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
-      ]
-    },
-    {
-      name: "Snails",
-      links: [
-        { name: "GitHub", url: "https://github.com/bencalabrese/Snails/" }
-      ],
-      descriptors: ["Lightweight Rails replica built in Ruby"],
-      bullets: [
-        "Hand-rolled ORM with built-in SQL query methods",
-        "Constructed router, views, and controllers to create " +
-          "fully RESTful apps serving ERB templates"
       ]
     }
   ]
