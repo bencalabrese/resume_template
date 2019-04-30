@@ -1,11 +1,11 @@
 @keyframes in-out {
   0%,
   100% {
-    opacity: 0.3;
+    fill: lightgrey;
   }
 
   70% {
-    opacity: 1;
+    fill: darkgrey;
   }
 }
 

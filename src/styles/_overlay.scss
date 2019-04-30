@@ -13,12 +13,6 @@
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
-
-  font-weight: bold;
-  font-size: 20px;
-  .arrow {
-    opacity: 0.3;
-  }
 }
 
 .has-overlay {
@@ -32,13 +26,13 @@
     > .overlay {
       opacity: 1;
 
-      :nth-child(1) {
+      > :nth-child(1) * {
         @include in-out(0.5s);
       }
-      :nth-child(2) {
+      > :nth-child(2) * {
         @include in-out(0.75s);
       }
-      :nth-child(3) {
+      > :nth-child(3) * {
         @include in-out(1s);
       }
     }

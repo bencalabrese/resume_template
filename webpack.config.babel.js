@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const { join, resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -56,6 +57,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.hbs"
     }),
+    new HtmlWebpackInlineSVGPlugin({ runPreEmit: true }),
     new MiniCssExtractPlugin()
   ]
 };

@@ -1,0 +1,23 @@
+.overlay svg {
+  height: 68px;
+  width: 32px;
+
+  * {
+    fill: lightgrey;
+  }
+}
+
+.chevrons {
+  svg {
+    height: 80px;
+    width: 80px;
+
+    &:first-child * {
+      fill: darkorange;
+    }
+
+    &:not(:first-child) * {
+      fill: lightgrey;
+    }
+  }
+}
