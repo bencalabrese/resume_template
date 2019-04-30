@@ -58,11 +58,14 @@ h4 {
   background-color: darkorange;
   height: 2px;
   width: auto;
-  margin: 0.125in 0;
+  margin: 0 0.25in;
 }
 
 .enclosure {
   border: 4px solid lightgrey;
   border-radius: 15px;
-  padding: 0.25in;
+
+  > section {
+    padding: 0.125in 0.25in;
+  }
 }

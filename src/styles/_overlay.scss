@@ -1,0 +1,47 @@
+@import "animations/inOut";
+
+.overlay {
+  padding: 0.125in 0.25in;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 20px;
+
+  :nth-child(1) {
+    @include in-out(0s);
+  }
+  :nth-child(2) {
+    @include in-out(0.25s);
+  }
+  :nth-child(3) {
+    @include in-out(0.5s);
+  }
+}
+
+.has-overlay {
+  position: relative;
+
+  > * {
+    transition: 1s;
+  }
+
+  &:hover {
+    > .overlay {
+      opacity: 1;
+    }
+
+    > :not(.overlay) {
+      opacity: 0.3;
+    }
+  }
+}
