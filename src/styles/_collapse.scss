@@ -1,0 +1,14 @@
+.has-collapsibles {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapsible {
+  transition: 10s;
+  overflow: hidden;
+  flex: 1 0 auto;
+}
+
+.collapsed {
+  flex: 0 0 0;
+}

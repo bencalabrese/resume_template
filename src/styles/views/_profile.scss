@@ -1,5 +1,9 @@
 .profile {
   text-align: right;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 670px;
 
   .profile-links {
     padding-top: 0.0875in;
@@ -24,8 +28,24 @@
     margin-top: 0.0875in;
   }
 
-  .skills ul {
-    display: grid;
-    grid-template-columns: auto auto;
+  .skills {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      height: 100%;
+      flex-grow: 1;
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto auto;
+    }
+  }
+
+  .education {
+    .aa-description {
+      // Kick this out a little since right-aligned italics are always masked
+      // by overflow: hidden.
+      padding-right: 0.25em;
+    }
   }
 }

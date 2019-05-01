@@ -22,16 +22,19 @@
       <h2 class="profile-label">Profile</h2>
 
       <section class="profile enclosure">
-        <section class="contact has-overlay">
+        {{!-- <h3 class="expandable-heading">Contact</h3> --}}
+        <section class="contact has-overlay collapsible">
           {{> overlay }}
-          {{> contact contact}}
+          <div>
+            {{> contact contact}}
+          </div>
         </section>
 
         <div class="divider"></div>
 
-        <section class="skills has-overlay">
+        <h3>Skills</h3>
+        <section class="skills has-overlay collapsible">
           {{> overlay}}
-          <h3>Skills</h3>
           <ul class="extra-spacing">
             {{#each skills as |skill|}}
               {{>skill skill}}
@@ -41,11 +44,13 @@
 
         <div class="divider"></div>
 
-        <section class="education has-overlay">
+        <h3>Education</h3>
+        <section class="education has-overlay collapsible">
           {{> overlay}}
-          <h3>Education</h3>
-          {{>appAcademy}}
-          {{>sfState}}
+          <div>
+            {{>appAcademy}}
+            {{>sfState}}
+          </div>
         </section>
       </section>
 
