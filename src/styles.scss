@@ -3,5 +3,8 @@
 @import "styles/overlay";
 @import "styles/main";
 @import "styles/views/";
-@import "styles/screen";
 @import "styles/images";
+
+@media screen {
+  @import "styles/screen";
+}

@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="1792"
-   viewBox="0 0 1792 1792"
-   width="1792"
+   height="32"
+   viewBox="0 0 32 32"
+   width="32"
    version="1.1"
    id="svg4"
    sodipodi:docname="folder.svg"
@@ -41,14 +41,20 @@
      inkscape:window-height="1025"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="0.13169643"
-     inkscape:cx="896"
-     inkscape:cy="896"
+     inkscape:zoom="5.9599001"
+     inkscape:cx="31.348271"
+     inkscape:cy="10.135585"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <path
-     d="M1728 608v704q0 92-66 158t-158 66h-1216q-92 0-158-66t-66-158v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h672q92 0 158 66t66 158z"
-     id="path2" />
+     d="m 28,12.181825 v 12 Q 28,25.75 26.889422,26.875 25.778847,28 24.23077,28 H 3.7692308 Q 2.2211539,28 1.1105768,26.875 0,25.75 0,24.181825 V 7.818175 Q 0,6.25 1.1105768,5.125 2.2211539,4 3.7692308,4 H 9.153847 q 1.548076,0 2.658653,1.125 1.110577,1.125 1.110577,2.693175 V 8.36365 h 11.307694 q 1.548077,0 2.658651,1.125 Q 28,10.61365 28,12.181825 Z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.01693584" />
 </svg>

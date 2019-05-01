@@ -74,8 +74,7 @@ export default {
       bullets: [
         "Nearly pure HTML/CSS with a little jQuery",
         "Animations and click events for the web while still styled for print",
-        "Parameterized for easy editing and different versions: one for " +
-          "projects I can talk about publicly and another for secret projects"
+        "Parameterized for easy editing and reuse"
       ]
     },
     {
