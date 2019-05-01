@@ -4,7 +4,23 @@ export default {
     phone: "(619) 208-8943",
     email: "bencalabrese@gmail.com",
     location: "San Mateo, CA",
-    links: [{ name: "Profile" }, { name: "Github" }, { name: "LinkedIn" }]
+    links: [
+      {
+        name: "Portfolio",
+        icon: "folder.svg",
+        url: "http://www.bencalabrese.com"
+      },
+      {
+        name: "LinkedIn",
+        icon: "linkedin.svg",
+        url: "https://www.linkedin.com/in/bcalabrese/"
+      },
+      {
+        name: "Github",
+        icon: "github.svg",
+        url: "https://github.com/bencalabrese"
+      }
+    ]
   },
   skills: [
     { name: "Dart" },

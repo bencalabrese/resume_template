@@ -1,8 +1,12 @@
 <p>{{phone}}</p>
 <p>{{email}}</p>
 <p>{{location}}</p>
-<div class="profile-links">
-    {{#each links}}
-        <div>{{name}}</div>
+<div class="profile-links extra-spacing">
+    {{!-- flexbox uses reverse order to maintain styling --}}
+    {{#each (reverse links) }}
+        <a href="{{ url }}">
+            <img inline src={{asset icon}}></img>
+            <p>{{name}}</p>
+        </a>
     {{/each}}
 </div>

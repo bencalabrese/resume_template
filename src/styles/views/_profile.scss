@@ -1,6 +1,23 @@
 .profile {
   text-align: right;
 
+  .profile-links {
+    padding-top: 0.0875in;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding-left: 0.75em;
+    }
+
+    svg {
+      padding-right: 0.5em;
+    }
+  }
+
   .contact {
     // Kick this down a little since the contact section has no heading.
     margin-top: 0.0875in;

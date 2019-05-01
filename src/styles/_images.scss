@@ -7,17 +7,24 @@
   }
 }
 
-.chevrons {
-  svg {
-    height: 80px;
-    width: 80px;
+.chevrons svg {
+  height: 80px;
+  width: 80px;
 
-    &:first-child * {
-      fill: darkorange;
-    }
+  &:first-child * {
+    fill: darkorange;
+  }
 
-    &:not(:first-child) * {
-      fill: lightgrey;
-    }
+  &:not(:first-child) * {
+    fill: lightgrey;
+  }
+}
+
+.profile-links svg {
+  height: 16px;
+  width: 16px;
+
+  * {
+    fill: dimgrey;
   }
 }
