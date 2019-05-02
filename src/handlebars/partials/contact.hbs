@@ -4,7 +4,7 @@
 <div class="profile-links extra-spacing">
     {{!-- flexbox uses reverse order to maintain styling --}}
     {{#each (reverse links) }}
-        <a href="{{ url }}">
+        <a target="_blank" href="{{ url }}">
             <img inline src={{asset icon}}></img>
             <p>{{name}}</p>
         </a>
