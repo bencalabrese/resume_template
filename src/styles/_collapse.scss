@@ -1,3 +1,5 @@
+@import "./animations/toggle";
+
 .has-collapsibles {
   display: flex;
   flex-direction: column;
@@ -21,18 +23,9 @@
 
 .collapsed.has-initially-collapsed-heading > {
   :not(.initially-collapsed-heading):not(.overlay) {
-    animation: toggle 0.5s forwards;
+    @include toggleOff;
   }
   .initially-collapsed-heading {
-    animation: toggle 0.5s 0.5s reverse forwards;
-  }
-}
-
-@keyframes toggle {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+    @include toggleOn($delay: 0.5s);
   }
 }
