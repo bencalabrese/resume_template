@@ -19,7 +19,9 @@ module.exports = {
     publicPath: "/",
     historyApiFallback: true,
     contentBase: join(__dirname, "src"),
-    watchContentBase: true
+    watchContentBase: true,
+    host: '0.0.0.0',
+    disableHostCheck: true
   },
   module: {
     rules: [
