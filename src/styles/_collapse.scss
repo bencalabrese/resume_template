@@ -11,6 +11,25 @@
 
 .initially-collapsed-heading {
   position: absolute;
+  opacity: 0;
   top: 0;
   right: 0;
+}
+
+.collapsed.has-initially-collapsed-heading > {
+  :not(.initially-collapsed-heading) {
+    animation: toggle 0.5s forwards;
+  }
+  .initially-collapsed-heading {
+    animation: toggle 0.5s 0.5s reverse forwards;
+  }
+}
+
+@keyframes toggle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
