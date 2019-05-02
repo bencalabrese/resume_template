@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     app: "./index.ts"
   },
+  devtool: "inline-source-map",
   output: {
     filename: "[name].bundle.js",
     path: resolve(__dirname, "dist")

@@ -23,6 +23,10 @@ export default class Stretchable {
     this.el.classList.remove(className);
   }
 
+  get overlay(): HTMLElement {
+    return this.el.querySelector(".overlay");
+  }
+
   matches(selector: string): boolean {
     return this.el.matches(selector);
   }
