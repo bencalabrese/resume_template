@@ -33,7 +33,6 @@ export default class Stretchable {
 
   collapse(): void {
     this.addClass("collapsed");
-    this.addClass("has-overlay");
     this.removeClass("expanded");
     this.flexBasis = this.headingHeight;
   }
@@ -41,12 +40,10 @@ export default class Stretchable {
   expand(): void {
     this.addClass("expanded");
     this.removeClass("collapsed");
-    this.removeClass("has-overlay");
     this.flexBasis = this.originalHeight;
   }
 
   normalize(): void {
-    this.addClass("has-overlay");
     this.removeClass("expanded");
     this.removeClass("collapsed");
     this.flexBasis = this.originalHeight;

@@ -1,5 +1,4 @@
 import Stretchable from "./stretchable";
-import { separate } from "./utils";
 import { without } from "lodash";
 
 export default class Profile {
