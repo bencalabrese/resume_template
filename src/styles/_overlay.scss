@@ -2,7 +2,6 @@
 
 .overlay {
   position: absolute;
-  opacity: 0;
   top: 0;
   bottom: 0;
   right: 0;
@@ -11,16 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: rgba($color: white, $alpha: 0.7);
+  opacity: 0;
+  transition: 1s;
 }
 
 .has-overlay {
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
-
-  > * {
-    transition: 1s;
-  }
 
   &:hover {
     > .overlay {
@@ -36,10 +34,6 @@
       > :nth-child(3) * {
         @include in-out(1s);
       }
-    }
-
-    > :not(.overlay) {
-      opacity: 0.3;
     }
   }
 }
