@@ -1,10 +1,12 @@
 require("./styles.scss");
 
-const contact = document.querySelector(".contact");
-const skills = document.querySelector(".skills");
-const education = document.querySelector(".education");
+const contact: HTMLElement = document.querySelector(".contact");
+const skills: HTMLElement = document.querySelector(".skills");
+const education: HTMLElement = document.querySelector(".education");
 
-const collapsibles = Array.from(document.querySelectorAll(".collapsible"));
+const collapsibles: ReadonlyArray<HTMLElement> = Array.from(
+  document.querySelectorAll(".collapsible")
+);
 
 let [
   contactHeadingHeight,
@@ -26,7 +28,7 @@ setTimeout(() => {
   collapse(education);
 }, 1000);
 
-function collapse(element) {
+function collapse(element: HTMLElement) {
   element.classList.add("collapsed");
   if (element === contact) {
     console.log(contactHeadingHeight);
@@ -34,5 +36,5 @@ function collapse(element) {
   } else if (element === education) {
     element.style.flexBasis = `${educationHeadingHeight}px`;
   }
-  element.style.flexGrow = 0;
+  element.style.flexGrow = "0";
 }

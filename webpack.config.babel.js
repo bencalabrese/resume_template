@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   context: resolve(__dirname, "src"),
   entry: {
-    app: "./index.js"
+    app: "./index.ts"
   },
   output: {
     filename: "[name].bundle.js",
@@ -49,8 +49,16 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ["file-loader"]
+      },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
       }
     ]
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
