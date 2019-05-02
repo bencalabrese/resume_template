@@ -4,9 +4,20 @@ const contact = document.querySelector(".contact");
 const skills = document.querySelector(".skills");
 const education = document.querySelector(".education");
 
-document.querySelectorAll(".collapsible").forEach(element => {
+const collapsibles = Array.from(document.querySelectorAll(".collapsible"));
+
+var headingHeight;
+
+collapsibles
+  .filter(element => element.matches(".has-initially-collapsed-heading"))
+  .forEach(element => {
+    const heading = element.querySelector(".initially-collapsed-heading");
+    headingHeight = heading.scrollHeight;
+  });
+
+collapsibles.forEach(element => {
   const originalHeight = element.scrollHeight;
-  element.style.flexBasis = originalHeight;
+  element.style.flexBasis = `${originalHeight}px`;
 });
 
 setTimeout(() => {
@@ -15,10 +26,10 @@ setTimeout(() => {
 }, 1000);
 
 function collapse(element) {
-  element.style.flexBasis = 0;
-  element.style.flexGrow = 0;
-
   if (element === contact) {
-    element.style.flexBasis = "10px";
+    element.style.flexBasis = `${headingHeight}px`;
+  } else {
+    element.style.flexBasis = 0;
   }
+  element.style.flexGrow = 0;
 }
