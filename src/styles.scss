@@ -9,3 +9,7 @@
 @media screen {
   @import "styles/screen";
 }
+
+@media print {
+  @import "styles/print";
+}
