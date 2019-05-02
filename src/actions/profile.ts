@@ -1,5 +1,5 @@
-import Stretchable from "./stretchable";
 import { without } from "lodash";
+import Stretchable from "./stretchable";
 
 export default class Profile {
   private readonly stretchables: Stretchable[];
@@ -10,10 +10,22 @@ export default class Profile {
       element => new Stretchable(element)
     );
 
-    this.stretchables.forEach(this.attachHandler.bind(this));
+    this.stretchables.forEach(this.attachStretchableHandler.bind(this));
+    this.attachGlobalHandler();
   }
 
-  private attachHandler(stretchable: Stretchable): void {
+  private attachGlobalHandler(): void {
+    const handleClick = (event: MouseEvent) => {
+      event.preventDefault();
+      if (!(event.target as HTMLElement).matches('.profile *')) {
+        this.normalize();
+      }
+    };
+    document.body.addEventListener('click', handleClick.bind(this))
+
+  }
+
+  private attachStretchableHandler(stretchable: Stretchable): void {
     const handleClick = (event: MouseEvent) => {
       event.preventDefault();
       this.expand(stretchable);
