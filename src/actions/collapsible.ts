@@ -18,9 +18,26 @@ export default class Collapsible {
     this.el.style.flexGrow = `${val}`;
   }
 
+  private toggleClass(className: string): void {
+    const classList = this.el.classList;
+    if (classList.contains(className)) {
+      classList.remove(className);
+    } else {
+      classList.add(className);
+    }
+  }
+
+  matches(selector: string): boolean {
+    return this.el.matches(selector);
+  }
+
   collapse(): void {
-    this.el.classList.add("collapsed");
+    this.toggleClass("collapsed");
     this.flexBasis = this.headingHeight;
     this.flexGrow = 0;
+  }
+
+  expand(): void {
+    this.toggleClass("expanded");
   }
 }

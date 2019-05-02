@@ -6,6 +6,9 @@
 .collapsible {
   transition: 1s;
   overflow: hidden;
+}
+
+.expanded {
   flex-grow: 1;
 }
 

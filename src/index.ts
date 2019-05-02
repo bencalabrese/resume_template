@@ -1,15 +1,9 @@
 require("./styles.scss");
 
-import Collapsible from "./actions/collapsible";
+import Profile from "./actions/profile";
 
-const collapsibles: ReadonlyArray<Collapsible> = Array.from(
-  <NodeListOf<HTMLElement>>document.querySelectorAll(".collapsible"),
-  element => new Collapsible(element)
-);
-
-const [contact, skills, education] = collapsibles;
+const profile = new Profile();
 
 setTimeout(() => {
-  contact.collapse();
-  education.collapse();
+  profile.expand(".skills");
 }, 1000);
