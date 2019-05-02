@@ -1,11 +1,6 @@
 @import "./animations/toggle";
 
-.has-collapsibles {
-  display: flex;
-  flex-direction: column;
-}
-
-.collapsible {
+.stretchable {
   transition: 1s;
   overflow: hidden;
 }

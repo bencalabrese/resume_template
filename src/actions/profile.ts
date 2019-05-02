@@ -1,23 +1,23 @@
-import Collapsible from "./collapsible";
+import Stretchable from "./stretchable";
 import { without } from "lodash";
 
 export default class Profile {
-  private readonly collapsibles: Collapsible[];
+  private readonly stretchables: Stretchable[];
 
   constructor() {
-    this.collapsibles = Array.from(
-      <NodeListOf<HTMLElement>>document.querySelectorAll(".collapsible"),
-      element => new Collapsible(element)
+    this.stretchables = Array.from(
+      <NodeListOf<HTMLElement>>document.querySelectorAll(".stretchable"),
+      element => new Stretchable(element)
     );
   }
 
   expand(selector: string): void {
-    const [target] = this.collapsibles.filter(collapsible =>
-      collapsible.matches(selector)
+    const [target] = this.stretchables.filter(stretchable =>
+      stretchable.matches(selector)
     );
     target.expand();
-    without(this.collapsibles, target).forEach(collapsible =>
-      collapsible.collapse()
+    without(this.stretchables, target).forEach(stretchable =>
+      stretchable.collapse()
     );
   }
 }

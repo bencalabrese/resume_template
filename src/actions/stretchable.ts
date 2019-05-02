@@ -1,4 +1,4 @@
-export default class Collapsible {
+export default class Stretchable {
   private readonly originalHeight: number;
   private readonly headingHeight: number;
 
