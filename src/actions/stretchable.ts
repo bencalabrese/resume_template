@@ -14,17 +14,13 @@ export default class Stretchable {
   private set flexBasis(val: number) {
     this.el.style.flexBasis = `${val}px`;
   }
-  private set flexGrow(val: number) {
-    this.el.style.flexGrow = `${val}`;
+
+  private addClass(className: string): void {
+    this.el.classList.add(className);
   }
 
-  private toggleClass(className: string): void {
-    const classList = this.el.classList;
-    if (classList.contains(className)) {
-      classList.remove(className);
-    } else {
-      classList.add(className);
-    }
+  private removeClass(className: string): void {
+    this.el.classList.remove(className);
   }
 
   matches(selector: string): boolean {
@@ -32,12 +28,23 @@ export default class Stretchable {
   }
 
   collapse(): void {
-    this.toggleClass("collapsed");
+    this.addClass("collapsed");
+    this.addClass("has-overlay");
+    this.removeClass("expanded");
     this.flexBasis = this.headingHeight;
-    this.flexGrow = 0;
   }
 
   expand(): void {
-    this.toggleClass("expanded");
+    this.addClass("expanded");
+    this.removeClass("collapsed");
+    this.removeClass("has-overlay");
+    this.flexBasis = this.originalHeight;
+  }
+
+  normalize(): void {
+    this.addClass("has-overlay");
+    this.removeClass("expanded");
+    this.removeClass("collapsed");
+    this.flexBasis = this.originalHeight;
   }
 }

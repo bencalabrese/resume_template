@@ -9,6 +9,10 @@
   flex-grow: 1;
 }
 
+.collapsed {
+  flex-grow: 0;
+}
+
 .initially-collapsed-heading {
   position: absolute;
   opacity: 0;
