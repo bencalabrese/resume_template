@@ -7,22 +7,27 @@
 
   <body>
     <main>
-      <section class="title">
-        <h1>{{ name }}</h1>
-        <h2 class="subtitle">Web Developer</h2>
-      </section>
+      <div class="left-column">
 
-      <section class="chevrons">
-        <img inline src="{{asset 'chevron.svg'}}" />
-        <img inline src="{{asset 'chevron.svg'}}" />
-        <img inline src="{{asset 'chevron.svg'}}" />
-      </section>
+        <section class="title">
+          <h1>{{ name }}</h1>
+          <h2 class="subtitle">Web Developer</h2>
+        </section>
 
-      <h2 class="profile-label">Profile</h2>
+        <h2 class="profile-label">Profile</h2>
 
-      {{>profile this}}
+        {{>profile this}}
+      </div>
 
-      {{>history this}}
+      <div class="right-column">
+        <section class="chevrons">
+          <img inline src="{{asset 'chevron.svg'}}" />
+          <img inline src="{{asset 'chevron.svg'}}" />
+          <img inline src="{{asset 'chevron.svg'}}" />
+        </section>
+
+        {{>history this}}
+      </div>
     </main>
   </body>
 {{/withParams}}

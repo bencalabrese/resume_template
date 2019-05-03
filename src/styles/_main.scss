@@ -5,36 +5,25 @@ main {
   padding: 1in;
   box-sizing: border-box;
   overflow: hidden;
-
-  display: grid;
-  grid-template-columns: [start] 2.25in [middle] auto [end];
-  grid-template-rows:
-    [top]
-    0.853in
-    [profile-label-top]
-    0.667in
-    [profile-top]
-    auto
-    [bottom];
-  grid-gap: 0.25in;
+  display: flex;
 }
 
-.title {
-  grid-area: top / start / profile-label-top / middle;
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-bottom: 0.25in;
+
+    &:last-child {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  }
 }
 
-.profile-label {
-  grid-area: profile-label-top / start / profile-top / middle;
-}
-
-.profile {
-  grid-area: profile-top / start / bottom / middle;
-}
-
-.chevrons {
-  grid-area: top / middle / bottom / end;
-}
-
-.history {
-  grid-area: profile-label-top / middle / bottom / end;
+.left-column {
+  width: 2.25in;
+  margin-right: 0.25in;
 }
