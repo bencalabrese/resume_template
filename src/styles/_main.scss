@@ -6,31 +6,34 @@ main {
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 2.25in auto;
-  grid-template-rows: 0.853in 0.667in auto;
-  grid-template-areas:
-    "title          chevrons"
-    "profile-label  history"
-    "profile        history";
+  grid-template-columns: [start] 2.25in [middle] auto [end];
+  grid-template-rows:
+    [top]
+    0.853in
+    [profile-label-top]
+    0.667in
+    [profile-top]
+    auto
+    [bottom];
   grid-gap: 0.25in;
 }
 
 .title {
-  grid-area: title;
-}
-
-.chevrons {
-  grid-area: chevrons;
+  grid-area: top / start / profile-label-top / middle;
 }
 
 .profile-label {
-  grid-area: profile-label;
+  grid-area: profile-label-top / start / profile-top / middle;
 }
 
 .profile {
-  grid-area: profile;
+  grid-area: profile-top / start / bottom / middle;
+}
+
+.chevrons {
+  grid-area: top / middle / bottom / end;
 }
 
 .history {
-  grid-area: history;
+  grid-area: profile-label-top / middle / bottom / end;
 }
