@@ -6,10 +6,21 @@ main {
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
+
+  &.wide-left {
+    .left-column {
+      width: calc(100% - 80px);
+    }
+
+    .right-column {
+      width: 80px;
+    }
+  }
 }
 
 .left-column,
 .right-column {
+  transition: 1s;
   display: flex;
   flex-direction: column;
 
@@ -26,4 +37,8 @@ main {
 .left-column {
   width: 2.25in;
   margin-right: 0.25in;
+}
+
+.right-column {
+  width: calc(100% - 2.25in);
 }

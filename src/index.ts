@@ -4,7 +4,7 @@ import Profile from "./actions/profile";
 import Chevrons from "./actions/chevrons";
 import History from "./actions/history";
 
-new Profile();
+const profile = new Profile();
 const chevrons = new Chevrons();
 const history = new History();
 
@@ -13,5 +13,6 @@ setTimeout(() => {
 }, 1000);
 
 setTimeout(() => {
-  history.raise();
-}, 3000);
+  const main: HTMLElement = document.querySelector("main");
+  main.classList.add("wide-left");
+}, 2000);
