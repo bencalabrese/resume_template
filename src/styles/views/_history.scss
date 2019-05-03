@@ -59,22 +59,79 @@ $remaining-history-travel: 0.75in;
 }
 
 .chevrons {
+  max-width: 276px;
+
   :nth-child(1) {
     align-self: center;
+    justify-self: center;
   }
   :nth-child(2) {
     align-self: flex-start;
+    justify-self: flex-start;
   }
   :nth-child(3) {
     align-self: flex-end;
+    justify-self: flex-end;
+  }
+}
+
+.wrapper-wrapper {
+  display: flex;
+  align-self: stretch;
+  justify-content: flex-end;
+}
+
+@keyframes switch-chevrons {
+  from {
+  }
+  to {
+    // align-self: unset;
+  }
+}
+
+@keyframes switch-chevrons-flex-direction {
+  from {
+  }
+  to {
+    flex-direction: column;
+    justify-content: space-between;
+    // align-self: stretch;
+    // justify-self: stretch;
+    flex-grow: 1;
+  }
+}
+
+// .spacer {
+//   background: blue;
+//   height: 30px;
+//   width: 10px;
+// }
+
+@keyframes switch-wrapper-flex-direction {
+  from {
+  }
+  to {
+    // flex-direction: column;
+    justify-content: flex-end;
+    align-self: stretch;
+    justify-self: stretch;
   }
 }
 
 .right-column.lowered {
   animation: lower-column linear 1s forwards;
 
+  .wrapper-wrapper {
+    animation: expand-chevrons linear 1s 1s forwards,
+      switch-wrapper-flex-direction linear 0s 3s forwards;
+  }
+
   .chevrons {
-    animation: expand-chevrons linear 1s 1s forwards;
+    animation: switch-chevrons-flex-direction linear 0s 3s forwards;
+
+    svg {
+      animation: switch-chevrons 0s 3s forwards;
+    }
   }
 
   .history {

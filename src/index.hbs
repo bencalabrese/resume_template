@@ -20,11 +20,14 @@
       </div>
 
       <div class="right-column">
-        <section class="chevrons">
-          <img inline src="{{asset 'chevron.svg'}}" />
-          <img inline src="{{asset 'chevron.svg'}}" />
-          <img inline src="{{asset 'chevron.svg'}}" />
-        </section>
+        <div class="wrapper-wrapper">
+          {{!-- <div class="spacer"></div> --}}
+          <section class="chevrons">
+            <img inline src="{{asset 'chevron.svg'}}" />
+            <img inline src="{{asset 'chevron.svg'}}" />
+            <img inline src="{{asset 'chevron.svg'}}" />
+          </section>
+        </div>
 
         {{>history this}}
       </div>

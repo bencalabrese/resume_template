@@ -6,14 +6,15 @@ main {
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
+  justify-content: space-between;
 
   &.wide-left {
     .left-column {
-      width: calc(100% - 80px);
+      flex-grow: 1;
     }
 
     .right-column {
-      width: 80px;
+      width: 92px;
     }
   }
 }
