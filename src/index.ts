@@ -15,4 +15,4 @@ setTimeout(() => {
 setTimeout(() => {
   const main: HTMLElement = document.querySelector("main");
   main.classList.add("wide-left");
-}, 2000);
+}, 4000);

@@ -2,7 +2,7 @@ export default class Chevrons {
   private readonly container: HTMLElement;
 
   constructor() {
-    this.container = document.querySelector(".history");
+    this.container = document.querySelector(".right-column");
   }
 
   lower(): void {

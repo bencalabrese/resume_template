@@ -27,3 +27,57 @@
     transform: translateY(calc(100% + 1in));
   }
 }
+
+$from-page-top-to-profile-top: calc(80px + 0.25in + 0.667in + 0.25in);
+$history-height: calc(9in - 80px - 0.25in - 0.667in - 0.25in);
+$remaining-history-travel: 0.75in;
+@keyframes lower-column {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY($from-page-top-to-profile-top);
+  }
+}
+
+@keyframes continue-lowering-history {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY($remaining-history-travel);
+  }
+}
+
+@keyframes expand-chevrons {
+  from {
+    min-height: 80px;
+  }
+  to {
+    min-height: $history-height;
+  }
+}
+
+.chevrons {
+  :nth-child(1) {
+    align-self: center;
+  }
+  :nth-child(2) {
+    align-self: flex-start;
+  }
+  :nth-child(3) {
+    align-self: flex-end;
+  }
+}
+
+.right-column.lowered {
+  animation: lower-column linear 1s forwards;
+
+  .chevrons {
+    animation: expand-chevrons linear 1s 1s forwards;
+  }
+
+  .history {
+    animation: continue-lowering-history linear 1s 2s forwards;
+  }
+}
