@@ -1,4 +1,6 @@
 .history {
+  transition: 1s;
+
   header {
     display: flex;
     justify-content: space-between;
@@ -19,5 +21,9 @@
 
   li {
     line-height: 1.25em;
+  }
+
+  &.lowered {
+    transform: translateY(calc(100% + 1in));
   }
 }

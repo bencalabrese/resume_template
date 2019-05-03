@@ -4,6 +4,7 @@ main {
   background-color: white;
   padding: 1in;
   box-sizing: border-box;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: [start] 2.25in [middle] auto [end];
