@@ -6,12 +6,12 @@ main {
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 2.25in 1in auto;
+  grid-template-columns: 2.25in auto;
   grid-template-rows: 0.853in 0.667in auto;
   grid-template-areas:
-    "title         title   chevrons"
-    "profile-label history history"
-    "profile       history history";
+    "title          chevrons"
+    "profile-label  history"
+    "profile        history";
   grid-gap: 0.25in;
 }
 

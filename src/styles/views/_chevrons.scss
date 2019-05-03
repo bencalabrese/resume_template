@@ -1,4 +1,8 @@
 .chevrons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  svg {
+    margin-left: 0.125in;
+  }
 }
