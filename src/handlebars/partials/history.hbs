@@ -1,0 +1,17 @@
+<section class="history enclosure">
+  <section class="experience">
+    <h3>Experience</h3>
+    {{#each experiences as |experience|}}
+      {{>project experience}}
+    {{/each}}
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="projects">
+    <h3>Projects</h3>
+    {{#each projects as |project|}}
+      {{>project project}}
+    {{/each}}
+  </section>
+</section>

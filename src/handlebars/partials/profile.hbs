@@ -1,0 +1,32 @@
+<section class="profile enclosure">
+  <section class="contact has-overlay stretchable has-initially-collapsed-heading">
+    <h3 class="initially-collapsed-heading">Contact</h3>
+    {{> overlay }}
+    <div>
+      {{> contact contact}}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="skills has-overlay stretchable">
+    <h3>Skills</h3>
+    {{> overlay}}
+    <ul class="extra-spacing">
+      {{#each skills as |skill|}}
+        {{>skill skill}}
+      {{/each}}
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="education has-overlay stretchable">
+    <h3>Education</h3>
+    {{> overlay}}
+    <div>
+      {{>appAcademy}}
+      {{>sfState}}
+    </div>
+  </section>
+</section>
