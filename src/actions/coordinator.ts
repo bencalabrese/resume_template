@@ -1,7 +1,7 @@
-import { without } from "lodash";
-import Stretchable from "./stretchable";
-import Profile from "./profile";
 import History from "./history";
+import Profile from "./profile";
+import Stretchable from "./stretchable";
+import { throttle } from "lodash";
 
 export default class Coordinator {
   private readonly profile = new Profile();
@@ -29,7 +29,10 @@ export default class Coordinator {
       this.profile.maximize();
       this.history.lower();
     };
-    stretchable.overlay.addEventListener("click", handleClick.bind(this));
+    stretchable.overlay.addEventListener(
+      "click",
+      throttle(handleClick.bind(this), 50)
+    );
   }
 
   normalize(): void {
