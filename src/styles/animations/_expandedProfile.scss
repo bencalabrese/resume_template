@@ -1,10 +1,10 @@
 .expanded-profile {
   .left-column {
-    animation: raise-profile 1s forwards, grow 1s 1s forwards;
-
-    .title,
+    animation: raise-profile 0.5s linear forwards, grow 1s 1s forwards;
+    anim .title,
     .profile-label {
-      animation: continue-raising-profile-label-and-title 1s 1s forwards;
+      animation: continue-raising-profile-label-and-title 0.5s linear 0.5s
+        forwards;
     }
   }
 
@@ -99,7 +99,7 @@ $remaining-history-travel: 0.75in;
 
 .right-column.lowered {
   .chevrons-row {
-    animation: expand-chevrons linear 1s forwards;
+    animation: expand-chevrons linear 0.9s forwards;
   }
 
   .chevrons {
@@ -107,6 +107,6 @@ $remaining-history-travel: 0.75in;
   }
 
   .history {
-    animation: continue-lowering-history linear 1s 2s forwards;
+    animation: continue-lowering-history linear 0.1s 0.9s forwards;
   }
 }
