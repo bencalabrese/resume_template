@@ -9,10 +9,7 @@ const chevrons = new Chevrons();
 const history = new History();
 
 setTimeout(() => {
-  history.lower();
-}, 1000);
-
-setTimeout(() => {
   const main: HTMLElement = document.querySelector("main");
   main.classList.add("expanded-profile");
-}, 4000);
+  history.lower();
+}, 1000);
