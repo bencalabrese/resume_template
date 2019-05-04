@@ -41,23 +41,6 @@
 $from-page-top-to-profile-top: calc(80px + 0.25in + 0.667in + 0.25in);
 $history-height: calc(9in - 80px - 0.25in - 0.667in - 0.25in);
 $remaining-history-travel: 0.75in;
-@keyframes lower-column {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY($from-page-top-to-profile-top);
-  }
-}
-
-@keyframes continue-lowering-history {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY($remaining-history-travel);
-  }
-}
 
 @keyframes expand-chevrons {
   from {
@@ -68,7 +51,15 @@ $remaining-history-travel: 0.75in;
   }
 }
 
+@keyframes continue-lowering-history {
+  to {
+    margin-top: 1in;
+  }
+}
+
 .chevrons {
+  max-height: 9in;
+
   :nth-child(1) {
     align-self: center;
     justify-self: center;
@@ -99,14 +90,14 @@ $remaining-history-travel: 0.75in;
 
 .right-column.lowered {
   .chevrons-row {
-    animation: expand-chevrons linear 0.9s forwards;
+    animation: expand-chevrons 1s forwards;
+  }
+
+  .history {
+    animation: continue-lowering-history 1s forwards;
   }
 
   .chevrons {
     animation: switch-chevrons-flex-direction linear 0s 1s forwards;
-  }
-
-  .history {
-    animation: continue-lowering-history linear 0.1s 0.9s forwards;
   }
 }
