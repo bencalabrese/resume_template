@@ -2,32 +2,24 @@ import { without } from "lodash";
 import Stretchable from "./stretchable";
 
 export default class Profile {
-  private readonly stretchables: Stretchable[];
+  private readonly main: HTMLElement = document.querySelector("main");
+  readonly stretchables: Stretchable[];
 
   constructor() {
     this.stretchables = Array.from(
-      <NodeListOf<HTMLElement>>document.querySelectorAll(".stretchable"),
+      <NodeListOf<HTMLElement>>(
+        document.querySelectorAll(".profile .stretchable")
+      ),
       element => new Stretchable(element)
     );
-
-    this.stretchables.forEach(this.attachStretchableHandler.bind(this));
-    this.attachGlobalHandler();
   }
 
-  private attachGlobalHandler(): void {
-    const handleClick = (event: MouseEvent) => {
-      if (!(event.target as HTMLElement).matches(".profile *")) {
-        this.normalize();
-      }
-    };
-    document.body.addEventListener("click", handleClick.bind(this));
+  private minimize(): void {
+    this.main.classList.remove("expanded-profile");
   }
 
-  private attachStretchableHandler(stretchable: Stretchable): void {
-    const handleClick = (event: MouseEvent) => {
-      this.expand(stretchable);
-    };
-    stretchable.overlay.addEventListener("click", handleClick.bind(this));
+  maximize(): void {
+    this.main.classList.add("expanded-profile");
   }
 
   expand(target: Stretchable): void {
@@ -39,5 +31,6 @@ export default class Profile {
 
   normalize(): void {
     this.stretchables.forEach(stretchable => stretchable.normalize());
+    this.minimize();
   }
 }
