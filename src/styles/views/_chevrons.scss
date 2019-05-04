@@ -10,7 +10,7 @@
   max-height: 9in;
   display: flex;
   justify-content: flex-end;
-  transition: 1s;
+  flex-grow: 1;
 
   svg {
     padding-left: 0.125in;

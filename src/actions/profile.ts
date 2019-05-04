@@ -21,24 +21,18 @@ export default class Profile {
   }
 
   private minimize(): void {
-    this.leftColumn.classList.remove("grow-horizontally");
-    this.rightColumn.classList.remove("reduce-horizontally");
+    this.main.classList.add("reverse");
+    this.main.classList.remove("expanded-profile");
 
     // setTimeout is more consistent than transitionend
     setTimeout(() => {
-      this.main.classList.remove("expanded-profile");
       this.stretchables.forEach(stretchable => stretchable.normalize());
-    }, 1000);
+    }, 1500);
   }
 
   maximize(): void {
+    this.main.classList.remove("reverse");
     this.main.classList.add("expanded-profile");
-
-    // setTimeout is more consistent than transitionend
-    setTimeout(() => {
-      this.leftColumn.classList.add("grow-horizontally");
-      this.rightColumn.classList.add("reduce-horizontally");
-    }, 1000);
   }
 
   expand(target: Stretchable): void {

@@ -1,57 +1,95 @@
-* {
-  transition: 1s;
-}
+$transition-time: 1.5s;
 
-.expanded-profile {
+main {
   .left-column {
-    transform: translateY(-192px);
-    height: calc(100% + 192px);
-
-    &.grow-horizontally {
-      flex-grow: 1;
-    }
+    transition: transform $transition-time ease 0s,
+      height $transition-time ease 0s,
+      flex-grow $transition-time ease $transition-time;
 
     .title,
     .profile-label {
-      transform: translateY(-1in);
+      transition: transform $transition-time ease 0s;
     }
   }
 
-  .right-column.reduce-horizontally {
-    width: 92px;
+  .right-column {
+    transition: width $transition-time ease $transition-time;
+  }
+
+  &.reverse {
+    .left-column {
+      transition: transform $transition-time ease $transition-time,
+        height $transition-time ease $transition-time,
+        flex-grow $transition-time ease 0s;
+
+      .title,
+      .profile-label {
+        transition: transform $transition-time ease $transition-time;
+      }
+    }
+
+    .right-column {
+      transition: width $transition-time ease 0s;
+    }
+  }
+
+  &.expanded-profile {
+    .left-column {
+      transform: translateY(-192px);
+      height: calc(100% + 192px);
+      flex-grow: 1;
+
+      .title,
+      .profile-label {
+        transform: translateY(-1in);
+      }
+    }
+
+    .right-column {
+      width: 92px;
+    }
   }
 }
 
-@keyframes expand-chevrons {
-  to {
-    min-height: 100%;
-  }
-}
+.right-column {
+  &.lowered {
+    .chevrons-row {
+      min-height: 100%;
+    }
 
-@keyframes continue-lowering-history {
-  to {
-    margin-top: 1in;
+    .history {
+      margin-top: 1in;
+    }
   }
-}
 
-@keyframes switch-chevrons-flex-direction {
-  to {
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-}
-
-.right-column.lowered {
   .chevrons-row {
-    animation: expand-chevrons 1s forwards;
+    transition: min-height $transition-time ease 0s;
   }
 
   .history {
-    animation: continue-lowering-history 1s forwards;
+    transition: margin-top $transition-time ease 0s;
   }
 
   .chevrons {
-    animation: switch-chevrons-flex-direction linear 0s 1s forwards;
+    transition: flex-grow $transition-time ease $transition-time;
   }
+
+  &.reverse {
+    .chevrons-row {
+      transition: min-height $transition-time ease $transition-time;
+    }
+
+    .history {
+      transition: margin-top $transition-time ease $transition-time;
+    }
+
+    .chevrons {
+      transition: flex-grow $transition-time ease 0s;
+    }
+  }
+}
+
+.chevrons.vertical {
+  flex-direction: column;
+  justify-content: space-between;
 }
