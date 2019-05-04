@@ -1,39 +1,24 @@
-@keyframes grow-horizontally {
-  to {
-    flex-grow: 1;
-  }
+* {
+  transition: 1s;
 }
 
-@keyframes reduce-horizontally {
-  to {
-    width: 92px;
-  }
-}
-
-@keyframes raise-profile {
-  to {
-    transform: translateY(-192px);
-    height: calc(100% + 192px);
-  }
-}
-
-@keyframes continue-raising-profile-label-and-title {
-  to {
-    transform: translateY(-1in);
-  }
-}
 .expanded-profile {
   .left-column {
-    animation: raise-profile 1s forwards, grow-horizontally 1s 1s forwards;
+    transform: translateY(-192px);
+    height: calc(100% + 192px);
+
+    &.grow-horizontally {
+      flex-grow: 1;
+    }
 
     .title,
     .profile-label {
-      animation: continue-raising-profile-label-and-title 1s forwards;
+      transform: translateY(-1in);
     }
   }
 
-  .right-column {
-    animation: reduce-horizontally 1s 1s forwards;
+  .right-column.reduce-horizontally {
+    width: 92px;
   }
 }
 
