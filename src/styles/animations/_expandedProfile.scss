@@ -1,6 +1,12 @@
-.wide-left {
+.expanded-profile {
   .left-column {
     flex-grow: 1;
+    animation: raise-profile 1s forwards;
+
+    .title,
+    .profile-label {
+      animation: continue-raising-profile-label-and-title 1s 1s forwards;
+    }
   }
 
   .right-column {
@@ -8,8 +14,17 @@
   }
 }
 
-.history.lowered {
-  transform: translateY(calc(100% + 1in));
+@keyframes raise-profile {
+  to {
+    transform: translateY(-192px);
+    height: calc(100% + 192px);
+  }
+}
+
+@keyframes continue-raising-profile-label-and-title {
+  to {
+    transform: translateY(-1in);
+  }
 }
 
 $from-page-top-to-profile-top: calc(80px + 0.25in + 0.667in + 0.25in);

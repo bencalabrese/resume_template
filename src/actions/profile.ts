@@ -16,18 +16,15 @@ export default class Profile {
 
   private attachGlobalHandler(): void {
     const handleClick = (event: MouseEvent) => {
-      event.preventDefault();
-      if (!(event.target as HTMLElement).matches('.profile *')) {
+      if (!(event.target as HTMLElement).matches(".profile *")) {
         this.normalize();
       }
     };
-    document.body.addEventListener('click', handleClick.bind(this))
-
+    document.body.addEventListener("click", handleClick.bind(this));
   }
 
   private attachStretchableHandler(stretchable: Stretchable): void {
     const handleClick = (event: MouseEvent) => {
-      event.preventDefault();
       this.expand(stretchable);
     };
     stretchable.overlay.addEventListener("click", handleClick.bind(this));

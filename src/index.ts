@@ -14,5 +14,5 @@ setTimeout(() => {
 
 setTimeout(() => {
   const main: HTMLElement = document.querySelector("main");
-  main.classList.add("wide-left");
+  main.classList.add("expanded-profile");
 }, 4000);
