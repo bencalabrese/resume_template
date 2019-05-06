@@ -111,32 +111,32 @@ main {
 }
 
 .right-column {
-  &.lowered {
-    .chevrons-row {
-      min-height: 100%;
-    }
-
-    .history {
-      margin-top: 1in;
-    }
+  @include step-animate(
+    ".chevrons-row",
+    append(
+      $empty-list,
+      (
+        "property": "min-height",
+        "step": 1
+      )
+    ),
+    "lowered"
+  ) {
+    min-height: 100%;
   }
 
-  .chevrons-row {
-    transition: min-height $transition-time ease 0s;
-  }
-
-  .history {
-    transition: margin-top $transition-time ease 0s;
-  }
-
-  &.reverse {
-    .chevrons-row {
-      transition: min-height $transition-time ease $transition-time;
-    }
-
-    .history {
-      transition: margin-top $transition-time ease $transition-time;
-    }
+  @include step-animate(
+    ".history",
+    append(
+      $empty-list,
+      (
+        "property": "margin-top",
+        "step": 1
+      )
+    ),
+    "lowered"
+  ) {
+    margin-top: 1in;
   }
 }
 
