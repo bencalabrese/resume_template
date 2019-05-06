@@ -1,11 +1,71 @@
 $transition-time: 1.5s;
 
-main {
-  .left-column {
-    transition: transform $transition-time ease 0s,
-      height $transition-time ease 0s,
-      flex-grow $transition-time ease $transition-time;
+@mixin step-animate($selector, $styles) {
+  $total-steps: 2;
+  $transition: "";
+  $reverse-transition: "";
+  $total-time: $transition-time * $total-steps;
 
+  @each $style in $styles {
+    $property: map-get(
+      $map: $style,
+      $key: "property"
+    );
+    $step: map-get(
+      $map: $style,
+      $key: "step"
+    );
+
+    @if ($transition != "") {
+      $transition: $transition + ", ";
+    }
+
+    @if ($reverse-transition != "") {
+      $reverse-transition: $reverse-transition + ", ";
+    }
+
+    $base-transition: "#{$property} #{$transition-time} ease ";
+    $delay: $transition-time * ($step - 1);
+    $reverse-delay: $total-time - ($step * $transition-time);
+
+    $transition: $transition + $base-transition + #{$delay};
+    $reverse-transition: $reverse-transition +
+      $base-transition +
+      #{$reverse-delay};
+  }
+
+  #{$selector} {
+    transition: #{$transition};
+  }
+
+  &.reverse {
+    #{$selector} {
+      transition: #{$reverse-transition};
+    }
+  }
+
+  &.expanded-profile {
+    #{$selector} {
+      @content;
+    }
+  }
+}
+
+main {
+  @include step-animate(
+    ".left-column",
+    (
+      ("property": "transform", "step": 1),
+      ("property": "height", "step": 1),
+      ("property": "flex-grow", "step": 2)
+    )
+  ) {
+    transform: translateY(-192px);
+    height: calc(100% + 192px);
+    flex-grow: 1;
+  }
+
+  .left-column {
     .title,
     .profile-label {
       transition: transform $transition-time ease 0s;
@@ -24,10 +84,6 @@ main {
 
   &.reverse {
     .left-column {
-      transition: transform $transition-time ease $transition-time,
-        height $transition-time ease $transition-time,
-        flex-grow $transition-time ease 0s;
-
       .title,
       .profile-label {
         transition: transform $transition-time ease $transition-time;
@@ -47,10 +103,6 @@ main {
 
   &.expanded-profile {
     .left-column {
-      transform: translateY(-192px);
-      height: calc(100% + 192px);
-      flex-grow: 1;
-
       .title,
       .profile-label {
         transform: translateY(-1in);
