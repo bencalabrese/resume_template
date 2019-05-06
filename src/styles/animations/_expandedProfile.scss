@@ -1,7 +1,7 @@
 $transition-time: 1.5s;
 $empty-list: ();
 
-@mixin step-animate($selector, $styles) {
+@mixin step-animate($selector, $styles, $special) {
   $total-steps: 2;
   $transition: "";
   $reverse-transition: "";
@@ -45,7 +45,7 @@ $empty-list: ();
     }
   }
 
-  &.expanded-profile {
+  &.#{$special} {
     #{$selector} {
       @content;
     }
@@ -59,7 +59,8 @@ main {
       ("property": "transform", "step": 1),
       ("property": "height", "step": 1),
       ("property": "flex-grow", "step": 2)
-    )
+    ),
+    "expanded-profile"
   ) {
     transform: translateY(-192px);
     height: calc(100% + 192px);
@@ -74,7 +75,8 @@ main {
         "property": "transform",
         "step": 1
       )
-    )
+    ),
+    "expanded-profile"
   ) {
     transform: translateY(-1in);
   }
@@ -85,7 +87,8 @@ main {
       ("property": "flex-grow", "step": 2),
       ("property": "min-width", "step": 2),
       ("property": "min-height", "step": 2)
-    )
+    ),
+    "expanded-profile"
   ) {
     flex-grow: 0;
     min-width: 60px;
@@ -100,7 +103,8 @@ main {
         "property": "width",
         "step": 2
       )
-    )
+    ),
+    "expanded-profile"
   ) {
     width: 92px;
   }
@@ -125,10 +129,6 @@ main {
     transition: margin-top $transition-time ease 0s;
   }
 
-  .chevrons {
-    transition: flex-grow $transition-time ease $transition-time;
-  }
-
   &.reverse {
     .chevrons-row {
       transition: min-height $transition-time ease $transition-time;
@@ -136,10 +136,6 @@ main {
 
     .history {
       transition: margin-top $transition-time ease $transition-time;
-    }
-
-    .chevrons {
-      transition: flex-grow $transition-time ease 0s;
     }
   }
 }
