@@ -32,6 +32,17 @@
       display: grid;
       align-items: center;
       grid-template-columns: auto auto;
+      text-align: initial;
+
+      li {
+        display: flex;
+
+        .spacer {
+          flex-grow: 1;
+          min-width: 0px;
+          min-height: 0px;
+        }
+      }
     }
   }
 

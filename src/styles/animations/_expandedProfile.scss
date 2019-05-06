@@ -10,6 +10,12 @@ main {
     .profile-label {
       transition: transform $transition-time ease 0s;
     }
+
+    .skills li .spacer {
+      transition: flex-grow $transition-time ease $transition-time,
+        min-width $transition-time ease $transition-time,
+        min-height $transition-time ease $transition-time;
+    }
   }
 
   .right-column {
@@ -25,6 +31,12 @@ main {
       .title,
       .profile-label {
         transition: transform $transition-time ease $transition-time;
+      }
+
+      .skills li .spacer {
+        transition: flex-grow $transition-time ease 0s,
+          min-width $transition-time ease 0s,
+          min-height $transition-time ease 0s;
       }
     }
 
@@ -42,6 +54,12 @@ main {
       .title,
       .profile-label {
         transform: translateY(-1in);
+      }
+
+      .skills li .spacer {
+        flex-grow: 0;
+        min-width: 60px;
+        min-height: 40px;
       }
     }
 
