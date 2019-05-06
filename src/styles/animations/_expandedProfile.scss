@@ -1,4 +1,5 @@
 $transition-time: 1.5s;
+$empty-list: ();
 
 @mixin step-animate($selector, $styles) {
   $total-steps: 2;
@@ -65,59 +66,43 @@ main {
     flex-grow: 1;
   }
 
-  .left-column {
-    .title,
-    .profile-label {
-      transition: transform $transition-time ease 0s;
-    }
-
-    .skills li .spacer {
-      transition: flex-grow $transition-time ease $transition-time,
-        min-width $transition-time ease $transition-time,
-        min-height $transition-time ease $transition-time;
-    }
+  @include step-animate(
+    ".left-column .title, .left-column .profile-label",
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 1
+      )
+    )
+  ) {
+    transform: translateY(-1in);
   }
 
-  .right-column {
-    transition: width $transition-time ease $transition-time;
+  @include step-animate(
+    ".left-column .skills li .spacer",
+    (
+      ("property": "flex-grow", "step": 2),
+      ("property": "min-width", "step": 2),
+      ("property": "min-height", "step": 2)
+    )
+  ) {
+    flex-grow: 0;
+    min-width: 60px;
+    min-height: 40px;
   }
 
-  &.reverse {
-    .left-column {
-      .title,
-      .profile-label {
-        transition: transform $transition-time ease $transition-time;
-      }
-
-      .skills li .spacer {
-        transition: flex-grow $transition-time ease 0s,
-          min-width $transition-time ease 0s,
-          min-height $transition-time ease 0s;
-      }
-    }
-
-    .right-column {
-      transition: width $transition-time ease 0s;
-    }
-  }
-
-  &.expanded-profile {
-    .left-column {
-      .title,
-      .profile-label {
-        transform: translateY(-1in);
-      }
-
-      .skills li .spacer {
-        flex-grow: 0;
-        min-width: 60px;
-        min-height: 40px;
-      }
-    }
-
-    .right-column {
-      width: 92px;
-    }
+  @include step-animate(
+    ".right-column",
+    append(
+      $empty-list,
+      (
+        "property": "width",
+        "step": 2
+      )
+    )
+  ) {
+    width: 92px;
   }
 }
 
