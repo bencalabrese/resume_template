@@ -2,7 +2,7 @@ $transition-time: 1.5s;
 $empty-list: ();
 
 @mixin step-animate($selector, $styles, $special) {
-  $total-steps: 2;
+  $total-steps: 3;
   $transition: "";
   $reverse-transition: "";
   $total-time: $transition-time * $total-steps;
@@ -93,6 +93,22 @@ main {
     flex-grow: 0;
     min-width: 60px;
     min-height: 40px;
+  }
+
+  @include step-animate(
+    ".left-column .skills li .spacer svg",
+    (
+      append(
+        $empty-list,
+        (
+          "property": "opacity",
+          "step": 3
+        )
+      )
+    ),
+    "expanded-profile"
+  ) {
+    opacity: 1;
   }
 
   @include step-animate(

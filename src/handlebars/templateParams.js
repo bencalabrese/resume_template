@@ -23,22 +23,22 @@ export default {
     ]
   },
   skills: [
-    { name: "Dart" },
-    { name: "AngularDart" },
-    { name: "Typescript" },
-    { name: "Python" },
-    { name: "SQL" },
-    { name: "Ruby" },
-    { name: "Git" },
-    { name: "Rails" },
-    { name: "HTML" },
-    { name: "Javascript" },
-    { name: "CSS" },
-    { name: "jQuery" },
-    { name: "Flux" },
-    { name: "React" },
-    { name: "C" },
-    { name: "Sass" }
+    { name: "Dart", icon: "skill_icons/rails.svg" },
+    { name: "AngularDart", icon: "skill_icons/rails.svg" },
+    { name: "Typescript", icon: "skill_icons/rails.svg" },
+    { name: "Python", icon: "skill_icons/rails.svg" },
+    { name: "SQL", icon: "skill_icons/rails.svg" },
+    { name: "Ruby", icon: "skill_icons/rails.svg" },
+    { name: "Git", icon: "skill_icons/rails.svg" },
+    { name: "Rails", icon: "skill_icons/rails.svg" },
+    { name: "HTML", icon: "skill_icons/rails.svg" },
+    { name: "Javascript", icon: "skill_icons/rails.svg" },
+    { name: "CSS", icon: "skill_icons/rails.svg" },
+    { name: "jQuery", icon: "skill_icons/rails.svg" },
+    { name: "Flux", icon: "skill_icons/rails.svg" },
+    { name: "React", icon: "skill_icons/rails.svg" },
+    { name: "C", icon: "skill_icons/rails.svg" },
+    { name: "Sass", icon: "skill_icons/rails.svg" }
   ],
   experiences: [
     {
