@@ -23,22 +23,22 @@ export default {
     ]
   },
   skills: [
-    { name: "Dart", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "AngularDart", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "Typescript", icon: "skill_icons/rails.svg", skillLevel: 3 },
-    { name: "Python", icon: "skill_icons/rails.svg", skillLevel: 2 },
-    { name: "SQL", icon: "skill_icons/rails.svg", skillLevel: 3 },
-    { name: "Ruby", icon: "skill_icons/rails.svg", skillLevel: 3 },
-    { name: "Git", icon: "skill_icons/rails.svg", skillLevel: 3 },
+    { name: "Dart", icon: "skill_icons/dart.svg", skillLevel: 4 },
+    { name: "AngularDart", icon: "skill_icons/angulardart.svg", skillLevel: 4 },
+    { name: "Javascript", icon: "skill_icons/javascript.svg", skillLevel: 4 },
+    { name: "HTML", icon: "skill_icons/html5.svg", skillLevel: 4 },
+    { name: "CSS", icon: "skill_icons/css3.svg", skillLevel: 4 },
+    { name: "Sass", icon: "skill_icons/sass.svg", skillLevel: 4 },
+    { name: "jQuery", icon: "skill_icons/jquery.svg", skillLevel: 4 },
+    { name: "Flux", icon: "skill_icons/flux.svg", skillLevel: 4 },
+    { name: "Typescript", icon: "skill_icons/typescript.svg", skillLevel: 3 },
+    { name: "React", icon: "skill_icons/react.svg", skillLevel: 3 },
+    { name: "Git", icon: "skill_icons/git.svg", skillLevel: 3 },
+    { name: "SQL", icon: "skill_icons/postgresql.svg", skillLevel: 3 },
+    { name: "Ruby", icon: "skill_icons/ruby.svg", skillLevel: 3 },
     { name: "Rails", icon: "skill_icons/rails.svg", skillLevel: 3 },
-    { name: "HTML", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "Javascript", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "CSS", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "jQuery", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "Flux", icon: "skill_icons/rails.svg", skillLevel: 4 },
-    { name: "React", icon: "skill_icons/rails.svg", skillLevel: 3 },
-    { name: "C", icon: "skill_icons/rails.svg", skillLevel: 1 },
-    { name: "Sass", icon: "skill_icons/rails.svg", skillLevel: 4 }
+    { name: "Python", icon: "skill_icons/python.svg", skillLevel: 2 },
+    { name: "AWS", icon: "skill_icons/aws.svg", skillLevel: 2 }
   ],
   experiences: [
     {
