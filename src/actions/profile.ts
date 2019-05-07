@@ -1,5 +1,6 @@
 import { without } from "lodash";
 import Stretchable from "./stretchable";
+import ProfileExpansion from "../utils/profile_expansion";
 
 export default class Profile {
   private readonly main: HTMLElement = document.querySelector("main");
@@ -27,7 +28,7 @@ export default class Profile {
     // setTimeout is more consistent than transitionend
     setTimeout(() => {
       this.stretchables.forEach(stretchable => stretchable.normalize());
-    }, 1500);
+    }, ProfileExpansion.reverseDelay(1));
   }
 
   maximize(): void {

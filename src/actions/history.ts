@@ -1,3 +1,5 @@
+import ProfileExpansion from "../utils/profile_expansion";
+
 export default class History {
   private readonly rightColumn: HTMLElement = document.querySelector(
     ".right-column"
@@ -13,7 +15,10 @@ export default class History {
     // In terms of timing, setTimeout is more consistent than transitionend.
     setTimeout(() => {
       this.chevrons.classList.remove("vertical");
-    }, 1500);
+      // Reset flex-direction a step early. It's trying to keep the positions
+      // of the chevrons unchanging, so it needs to bookend the step rather than
+      // change consistently.
+    }, ProfileExpansion.reverseDelay(2 - 1));
   }
 
   lower(): void {
@@ -26,7 +31,7 @@ export default class History {
     // In terms of timing, setTimeout is more consistent than transitionend.
     setTimeout(() => {
       this.chevrons.classList.add("vertical");
-    }, 1500);
+    }, ProfileExpansion.forwardDelay(2));
   }
 
   normalize(): void {
