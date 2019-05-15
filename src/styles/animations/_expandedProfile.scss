@@ -96,23 +96,7 @@ main {
   }
 
   @include step-animate(
-    ".left-column .skills li svg, .left-column .education svg, .left-column .education img",
-    (
-      append(
-        $empty-list,
-        (
-          "property": "opacity",
-          "step": 3
-        )
-      )
-    ),
-    "expanded-profile"
-  ) {
-    opacity: 1;
-  }
-
-  @include step-animate(
-    ".left-column .skills li .skill-level span",
+    ".left-column .initially-hidden",
     (
       append(
         $empty-list,

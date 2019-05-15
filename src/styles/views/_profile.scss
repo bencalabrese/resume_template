@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  .initially-hidden {
+    opacity: 0;
+  }
+
   .profile-links {
     padding-top: 0.0875in;
     display: flex;
@@ -44,8 +48,7 @@
           min-height: 0px;
         }
 
-        svg {
-          opacity: 0;
+        img {
           position: absolute;
           height: 40px;
           width: 40px;
@@ -60,7 +63,6 @@
       display: flex;
 
       span {
-        opacity: 0;
         width: 15px;
         height: 15px;
         margin-right: 5px;
@@ -98,13 +100,11 @@
     .sf-state {
       flex-grow: 1;
 
-      img,
-      svg {
+      img {
         position: absolute;
         left: 0;
         width: 250px;
         padding-top: 16px;
-        opacity: 0;
       }
     }
 
