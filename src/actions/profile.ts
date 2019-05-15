@@ -1,6 +1,6 @@
 import { without } from "lodash";
-import Stretchable from "./stretchable";
 import ProfileExpansion from "../utils/profile_expansion";
+import Stretchable from "./stretchable";
 
 export default class Profile {
   private readonly main: HTMLElement = document.querySelector("main");
@@ -19,6 +19,14 @@ export default class Profile {
       ),
       element => new Stretchable(element)
     );
+
+    this.fixWidth(".app-academy .info");
+    this.fixWidth(".sf-state .info");
+  }
+
+  private fixWidth(selector: string): void {
+    let el: HTMLElement = document.querySelector(selector);
+    el.style.maxWidth = `${el.scrollWidth}px`;
   }
 
   private minimize(): void {

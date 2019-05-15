@@ -50,40 +50,63 @@
           height: 40px;
           width: 40px;
         }
+      }
+    }
 
-        .skill-level {
-          position: absolute;
-          bottom: 0;
-          left: 60px;
-          display: flex;
+    .skill-level {
+      position: absolute;
+      bottom: 0;
+      left: 60px;
+      display: flex;
 
-          span {
-            opacity: 0;
-            width: 15px;
-            height: 15px;
-            background-color: green;
-            margin-right: 5px;
-            border-radius: 3px;
+      span {
+        opacity: 0;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        border-radius: 3px;
 
-            &:nth-child(1) {
-              background-color: #c0e5d3;
-            }
-            &:nth-child(2) {
-              background-color: #abddc4;
-            }
-            &:nth-child(3) {
-              background-color: #78c8a1;
-            }
-            &:nth-child(4) {
-              background-color: #57bb8a;
-            }
-          }
+        &:nth-child(1) {
+          background-color: #c0e5d3;
+        }
+        &:nth-child(2) {
+          background-color: #abddc4;
+        }
+        &:nth-child(3) {
+          background-color: #78c8a1;
+        }
+        &:nth-child(4) {
+          background-color: #57bb8a;
         }
       }
     }
   }
 
   .education {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+
+    .schools {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .app-academy,
+    .sf-state {
+      flex-grow: 1;
+
+      img,
+      svg {
+        position: absolute;
+        left: 0;
+        width: 250px;
+        padding-top: 16px;
+      }
+    }
+
     .aa-description {
       // Kick this out a little since right-aligned italics are always masked
       // by overflow: hidden.
