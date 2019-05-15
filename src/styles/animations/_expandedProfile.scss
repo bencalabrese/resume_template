@@ -96,7 +96,7 @@ main {
   }
 
   @include step-animate(
-    ".left-column .skills li svg",
+    ".left-column .skills li svg, .left-column .education svg, .left-column .education img",
     (
       append(
         $empty-list,
