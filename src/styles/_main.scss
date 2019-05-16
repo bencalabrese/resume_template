@@ -6,7 +6,17 @@ main {
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columns {
+  display: flex;
 }
 
 .left-column,
