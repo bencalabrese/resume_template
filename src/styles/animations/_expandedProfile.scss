@@ -57,35 +57,17 @@ main {
     ".left-column",
     (
       append(
-          $empty-list,
-          (
-            "property": "min-width",
-            "step": 2
-          )
+        $empty-list,
+        (
+          "property": "min-width",
+          "step": 2
         )
-        // ("property": "transform", "step": 1),
-        // ("property": "height", "step": 1),
+      )
     ),
     "expanded-profile"
   ) {
-    // transform: translateY(-192px);
-    // height: calc(100% + 192px);
     min-width: 100%;
   }
-
-  // @include step-animate(
-  //   ".left-column .title, .left-column .profile-label",
-  //   append(
-  //     $empty-list,
-  //     (
-  //       "property": "transform",
-  //       "step": 1
-  //     )
-  //   ),
-  //   "expanded-profile"
-  // ) {
-  //   transform: translateY(-1in);
-  // }
 
   @include step-animate(
     ".left-column .skills li .spacer",
@@ -131,38 +113,3 @@ main {
     transform: translateX(1in);
   }
 }
-
-// .right-column {
-//   // @include step-animate(
-//   //   ".chevrons-row",
-//   //   append(
-//   //     $empty-list,
-//   //     (
-//   //       "property": "min-height",
-//   //       "step": 1
-//   //     )
-//   //   ),
-//   //   "lowered"
-//   // ) {
-//   //   min-height: 100%;
-//   // }
-
-//   @include step-animate(
-//     ".history",
-//     append(
-//       $empty-list,
-//       (
-//         "property": "margin-top",
-//         "step": 1
-//       )
-//     ),
-//     "lowered"
-//   ) {
-//     margin-top: 1in;
-//   }
-// }
-
-// .chevrons.vertical {
-//   flex-direction: column;
-//   justify-content: space-between;
-// }
