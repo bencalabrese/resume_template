@@ -6,6 +6,11 @@ export default class Profile {
   private readonly main: HTMLElement = document.querySelector("main");
   readonly stretchables: Stretchable[];
 
+  private _isMaximized = false;
+  get isMaximized(): boolean {
+    return this._isMaximized;
+  }
+
   constructor() {
     this.stretchables = Array.from(
       <NodeListOf<HTMLElement>>(
@@ -26,6 +31,7 @@ export default class Profile {
   private minimize(): void {
     this.main.classList.add("reverse");
     this.main.classList.remove("expanded-profile");
+    this._isMaximized = false;
 
     // setTimeout is more consistent than transitionend
     setTimeout(() => {
@@ -33,9 +39,10 @@ export default class Profile {
     }, ProfileExpansion.reverseDelay(1));
   }
 
-  private maximize(): void {
+  maximize(): void {
     this.main.classList.remove("reverse");
     this.main.classList.add("expanded-profile");
+    this._isMaximized = true;
   }
 
   expand(target: Stretchable): void {
@@ -43,7 +50,6 @@ export default class Profile {
     without(this.stretchables, target).forEach(stretchable =>
       stretchable.collapse()
     );
-    this.maximize();
   }
 
   normalize(): void {
