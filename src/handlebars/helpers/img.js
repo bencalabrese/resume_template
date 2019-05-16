@@ -1,3 +1,3 @@
 export default function(name) {
-  return `assets/${name}`;
+  return require(`../../assets/${name}`);
 }
