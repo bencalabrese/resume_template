@@ -47,7 +47,7 @@ export default class Coordinator {
     const maximizeProfile = runIf(
       () => !this.profile.isMaximized,
       this.lock.wrap({
-        key: CoordinatorAction.expandProfileStretchable,
+        key: CoordinatorAction.maximizeProfile,
         lockedOutKeys: new Set([CoordinatorAction.normalize]),
         duration: ProfileExpansion.totalTime,
         callback: () => {
