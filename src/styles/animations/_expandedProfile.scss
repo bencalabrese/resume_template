@@ -55,13 +55,11 @@ $empty-list: ();
 main {
   @include step-animate(
     ".left-column",
-    (
-      append(
-        $empty-list,
-        (
-          "property": "min-width",
-          "step": 2
-        )
+    append(
+      $empty-list,
+      (
+        "property": "min-width",
+        "step": 2
       )
     ),
     "expanded-profile"
@@ -84,14 +82,26 @@ main {
   }
 
   @include step-animate(
+    ".left-column .skills ul",
+    append(
+      $empty-list,
+      (
+        "property": "padding-left",
+        "step": 2
+      )
+    ),
+    "expanded-profile"
+  ) {
+    padding-left: 70px;
+  }
+
+  @include step-animate(
     ".left-column .initially-hidden",
-    (
-      append(
-        $empty-list,
-        (
-          "property": "opacity",
-          "step": 3
-        )
+    append(
+      $empty-list,
+      (
+        "property": "opacity",
+        "step": 3
       )
     ),
     "expanded-profile"
