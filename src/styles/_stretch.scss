@@ -19,12 +19,3 @@
   top: 0;
   right: 0;
 }
-
-.collapsed.has-initially-collapsed-heading > {
-  :not(.initially-collapsed-heading):not(.overlay) {
-    @include toggleOff;
-  }
-  .initially-collapsed-heading {
-    @include toggleOn($delay: 0.5s);
-  }
-}
