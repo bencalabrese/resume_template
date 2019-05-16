@@ -4,12 +4,6 @@ import Stretchable from "./stretchable";
 
 export default class Profile {
   private readonly main: HTMLElement = document.querySelector("main");
-  private readonly leftColumn: HTMLElement = document.querySelector(
-    ".left-column"
-  );
-  private readonly rightColumn: HTMLElement = document.querySelector(
-    ".right-column"
-  );
   readonly stretchables: Stretchable[];
 
   constructor() {
