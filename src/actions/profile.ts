@@ -33,7 +33,7 @@ export default class Profile {
     }, ProfileExpansion.reverseDelay(1));
   }
 
-  maximize(): void {
+  private maximize(): void {
     this.main.classList.remove("reverse");
     this.main.classList.add("expanded-profile");
   }
@@ -43,6 +43,7 @@ export default class Profile {
     without(this.stretchables, target).forEach(stretchable =>
       stretchable.collapse()
     );
+    this.maximize();
   }
 
   normalize(): void {
