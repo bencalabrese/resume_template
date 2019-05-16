@@ -21,6 +21,7 @@ export default class Profile {
 
     this.fixWidth(".app-academy .info");
     this.fixWidth(".sf-state .info");
+    this.fixWidth(".contact .info");
   }
 
   private fixWidth(selector: string): void {
