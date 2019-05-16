@@ -33,10 +33,10 @@ export default {
     { name: "Flux", icon: "skill_icons/flux.svg", skillLevel: 4 },
     { name: "Typescript", icon: "skill_icons/typescript.svg", skillLevel: 3 },
     { name: "React", icon: "skill_icons/react.svg", skillLevel: 3 },
-    { name: "Git", icon: "skill_icons/git.svg", skillLevel: 3 },
-    { name: "SQL", icon: "skill_icons/postgresql.svg", skillLevel: 3 },
     { name: "Ruby", icon: "skill_icons/ruby.svg", skillLevel: 3 },
     { name: "Rails", icon: "skill_icons/rails.svg", skillLevel: 3 },
+    { name: "Git", icon: "skill_icons/git.svg", skillLevel: 3 },
+    { name: "SQL", icon: "skill_icons/postgresql.svg", skillLevel: 3 },
     { name: "Python", icon: "skill_icons/python.svg", skillLevel: 2 },
     { name: "AWS", icon: "skill_icons/aws.svg", skillLevel: 2 }
   ],
