@@ -68,31 +68,17 @@ main {
   }
 
   @include step-animate(
-    ".left-column .contact .info",
-    append(
-      $empty-list,
-      (
-        "property": "transform",
-        "step": 1
-      )
+    ".has-initially-collapsed-heading .initially-collapsed-heading",
+    (
+      ("property": "max-height", "step": 1),
+      ("property": "min-height", "step": 1),
+      ("property": "padding", "step": 1)
     ),
     "expanded-profile"
   ) {
-    transform: translateY(calc(20px + 0.175in));
-  }
-
-  @include step-animate(
-    ".has-initially-collapsed-heading > .initially-collapsed-heading",
-    append(
-      $empty-list,
-      (
-        "property": "opacity",
-        "step": 1
-      )
-    ),
-    "expanded-profile"
-  ) {
-    opacity: 1;
+    max-height: calc(20px + 0.175in);
+    min-height: calc(20px + 0.175in);
+    padding: 0.0875in 0;
   }
 
   @include step-animate(
