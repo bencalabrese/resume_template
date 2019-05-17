@@ -1,11 +1,12 @@
 export default class Stretchable {
+  private static readonly headingHeight = document.querySelector(
+    "h3:not(.initially-collapsed-heading)"
+  ).scrollHeight;
+
   private readonly originalHeight: number;
-  private readonly headingHeight: number;
   private readonly isInitiallyGrown: boolean;
 
   constructor(private readonly el: HTMLElement) {
-    const heading = this.el.querySelector("h3");
-    this.headingHeight = heading.scrollHeight;
     this.originalHeight = this.el.offsetHeight;
     this.isInitiallyGrown =
       parseFloat(getComputedStyle(this.el).flexGrow) !== 0;
@@ -31,7 +32,7 @@ export default class Stretchable {
     // set to be smaller than its initially computed height. If the flex basis
     // is set higher than that, items inside will not properly grow.
     if (this.isInitiallyGrown) {
-      this.flexBasis = this.headingHeight;
+      this.flexBasis = Stretchable.headingHeight;
     } else {
       this.flexBasis = this.originalHeight;
     }
@@ -48,7 +49,7 @@ export default class Stretchable {
   collapse(): void {
     this.addClass("collapsed");
     this.removeClass("expanded");
-    this.flexBasis = this.headingHeight;
+    this.flexBasis = Stretchable.headingHeight;
   }
 
   expand(): void {
