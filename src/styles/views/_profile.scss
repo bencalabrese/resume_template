@@ -8,21 +8,40 @@
     opacity: 0;
   }
 
-  .profile-links {
-    padding-top: 0.0875in;
+  .contact {
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
 
-    a {
+    .profile-links {
+      padding-top: 0.0875in;
       display: flex;
-      align-items: center;
-      width: 70px;
-      padding-left: 0.75em;
+      justify-content: flex-end;
+      flex-wrap: wrap-reverse;
+
+      a {
+        display: flex;
+        align-items: center;
+        width: 70px;
+        padding-left: 0.75em;
+      }
+
+      svg {
+        padding-right: 0.5em;
+      }
     }
 
-    svg {
-      padding-right: 0.5em;
+    .headshot-and-about-me {
+      position: absolute;
+      text-align: left;
+      top: calc(20px + 0.175in);
+
+      img {
+        width: 350px;
+        border-radius: 15px;
+        margin-bottom: 0.25in;
+      }
     }
   }
 
@@ -105,6 +124,10 @@
         left: 0;
         width: 350px;
       }
+    }
+
+    .sf-state {
+      padding-top: 0.0875in;
     }
 
     .aa-description {

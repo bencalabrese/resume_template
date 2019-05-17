@@ -1,5 +1,3 @@
-@import "./animations/toggle";
-
 .stretchable {
   transition: 1.5s;
   overflow: hidden;
@@ -18,13 +16,4 @@
   opacity: 0;
   top: 0;
   right: 0;
-}
-
-.collapsed.has-initially-collapsed-heading > {
-  :not(.initially-collapsed-heading):not(.overlay) {
-    @include toggleOff;
-  }
-  .initially-collapsed-heading {
-    @include toggleOn($delay: 0.5s);
-  }
 }

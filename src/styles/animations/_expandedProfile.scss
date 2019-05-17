@@ -68,6 +68,34 @@ main {
   }
 
   @include step-animate(
+    ".left-column .contact .info",
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 1
+      )
+    ),
+    "expanded-profile"
+  ) {
+    transform: translateY(calc(20px + 0.175in));
+  }
+
+  @include step-animate(
+    ".has-initially-collapsed-heading > .initially-collapsed-heading",
+    append(
+      $empty-list,
+      (
+        "property": "opacity",
+        "step": 1
+      )
+    ),
+    "expanded-profile"
+  ) {
+    opacity: 1;
+  }
+
+  @include step-animate(
     ".left-column .skills li .spacer",
     (
       ("property": "flex-grow", "step": 2),

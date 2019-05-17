@@ -6,7 +6,7 @@ export default class Stretchable {
     const heading = this.el.querySelector("h3");
     this.headingHeight = heading.scrollHeight;
 
-    this.originalHeight = this.el.scrollHeight;
+    this.originalHeight = this.el.offsetHeight;
     // Explicitly set the flex basis to allow smooth transitions.
     this.flexBasis = this.originalHeight;
   }

@@ -38,4 +38,8 @@
       opacity: 1;
     }
   }
+
+  &.expanded > .overlay {
+    display: none;
+  }
 }
