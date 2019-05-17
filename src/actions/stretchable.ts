@@ -1,14 +1,17 @@
 export default class Stretchable {
   private readonly originalHeight: number;
   private readonly headingHeight: number;
+  private readonly isInitiallyGrown: boolean;
 
   constructor(private readonly el: HTMLElement) {
     const heading = this.el.querySelector("h3");
     this.headingHeight = heading.scrollHeight;
-
     this.originalHeight = this.el.offsetHeight;
+    this.isInitiallyGrown =
+      parseFloat(getComputedStyle(this.el).flexGrow) !== 0;
+
     // Explicitly set the flex basis to allow smooth transitions.
-    this.flexBasis = this.originalHeight;
+    this.normalizeHeight();
   }
 
   private set flexBasis(val: number) {
@@ -21,6 +24,17 @@ export default class Stretchable {
 
   private removeClass(className: string): void {
     this.el.classList.remove(className);
+  }
+
+  private normalizeHeight(): void {
+    // If the element naturally grows to fit its space, the flex basis should be
+    // set to be smaller than its initially computed height. If the flex basis
+    // is set higher than that, items inside will not properly grow.
+    if (this.isInitiallyGrown) {
+      this.flexBasis = this.headingHeight;
+    } else {
+      this.flexBasis = this.originalHeight;
+    }
   }
 
   get overlay(): HTMLElement {
@@ -40,12 +54,12 @@ export default class Stretchable {
   expand(): void {
     this.addClass("expanded");
     this.removeClass("collapsed");
-    this.flexBasis = this.originalHeight;
+    this.normalizeHeight();
   }
 
   normalize(): void {
     this.removeClass("expanded");
     this.removeClass("collapsed");
-    this.flexBasis = this.originalHeight;
+    this.normalizeHeight();
   }
 }
