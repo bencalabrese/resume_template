@@ -1,14 +1,14 @@
 .stretchable {
   transition: 1.5s;
   overflow: hidden;
-}
 
-.expanded {
-  flex-grow: 1;
-}
+  &.expanded {
+    flex-grow: 1;
+  }
 
-.collapsed {
-  flex-grow: 0;
+  &.collapsed {
+    flex-grow: 0;
+  }
 }
 
 .initially-collapsed-heading {

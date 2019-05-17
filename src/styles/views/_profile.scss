@@ -48,6 +48,7 @@
   .skills {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     ul {
       height: 100%;
