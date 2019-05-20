@@ -38,7 +38,8 @@ h4 {
   font-size: 13px;
 }
 
-.subheader {
+.subheader,
+.history-chunk {
   margin-bottom: 0.025in;
 
   &:not(:first-of-type) {

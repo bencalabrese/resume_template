@@ -1,23 +1,25 @@
-<header class="subheader">
+<div class="history-chunk">
+  <header class="subheader">
     <h4>{{name}}</h4>
     {{#if links}}
-        <span class="links">
-            {{#each links}}
-                <a target="blank" href="{{url}}">{{name}}</a>
-                {{#unless @last}}&nbsp;|&nbsp;{{/unless}}
-            {{/each}}
-        </span>
-    {{/if}}
-</header>
-<section class="history-chunk">
-    <p class="description italics">
-        {{#each descriptors as |descriptor|}}
-            <span>{{descriptor}}</span>
+      <span class="links">
+        {{#each links}}
+          <a target="blank" href="{{url}}">{{name}}</a>
+          {{#unless @last}}&nbsp;|&nbsp;{{/unless}}
         {{/each}}
+      </span>
+    {{/if}}
+  </header>
+  <section class="info">
+    <p class="description italics">
+      {{#each descriptors as |descriptor|}}
+        <span>{{descriptor}}</span>
+      {{/each}}
     </p>
     <ul>
-        {{#each bullets as |bullet|}}
-            <li>{{bullet}}</li>
-        {{/each}}
+      {{#each bullets as |bullet|}}
+        <li>{{bullet}}</li>
+      {{/each}}
     </ul>
-</section>
+  </section>
+</div>
