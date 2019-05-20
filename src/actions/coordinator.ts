@@ -1,31 +1,45 @@
+import Lock from "../utils/lock";
+import ProfileExpansion from "../utils/profile_expansion";
+import runIf from "../utils/run_if";
+import History from "./history";
 import Profile from "./profile";
 import Stretchable from "./stretchable";
-import Lock from "../utils/lock";
-import runIf from "../utils/run_if";
-import ProfileExpansion from "../utils/profile_expansion";
 
 export default class Coordinator {
   private readonly profile = new Profile();
+  private readonly history = new History();
   private readonly lock = new Lock<CoordinatorAction>();
 
   constructor() {
-    this.profile.stretchables.forEach(this.attachStretchableHandler.bind(this));
+    this.profile.stretchables.forEach(
+      this.attachProfileStretchableHandler.bind(this)
+    );
+    this.history.stretchables.forEach(
+      this.attachHistoryStretchableHandler.bind(this)
+    );
 
     this.attachGlobalHandler();
   }
 
   private attachGlobalHandler(): void {
     const onGlobalClick = runIf(
-      () => this.profile.isMaximized,
+      () => this.profile.isMaximized || this.history.isMaximized,
       this.lock.wrap({
         key: CoordinatorAction.normalize,
         lockedOutKeys: new Set([
+          CoordinatorAction.expandHistoryStretchable,
+          CoordinatorAction.maximizeHistory,
           CoordinatorAction.expandProfileStretchable,
           CoordinatorAction.maximizeProfile
         ]),
         duration: ProfileExpansion.totalTime,
         callback: (event: MouseEvent) => {
-          if (!(event.target as HTMLElement).matches(".profile *")) {
+          const target = event.target as HTMLElement;
+
+          if (
+            (this.profile.isMaximized && !target.matches(".profile *")) ||
+            (this.history.isMaximized && !target.matches(".history *"))
+          ) {
             this.normalize();
           }
         }
@@ -35,10 +49,14 @@ export default class Coordinator {
     document.body.addEventListener("click", onGlobalClick);
   }
 
-  private attachStretchableHandler(stretchable: Stretchable): void {
+  private attachProfileStretchableHandler(stretchable: Stretchable): void {
     const expandStretchable = this.lock.wrap({
       key: CoordinatorAction.expandProfileStretchable,
-      lockedOutKeys: new Set([CoordinatorAction.normalize]),
+      lockedOutKeys: new Set([
+        CoordinatorAction.normalize,
+        CoordinatorAction.expandHistoryStretchable,
+        CoordinatorAction.maximizeHistory
+      ]),
       duration: ProfileExpansion.transitionTime,
       callback: () => {
         this.profile.expand(stretchable);
@@ -50,12 +68,12 @@ export default class Coordinator {
         key: CoordinatorAction.maximizeProfile,
         lockedOutKeys: new Set([
           CoordinatorAction.normalize,
-          CoordinatorAction.expandProfileStretchable
+          CoordinatorAction.expandProfileStretchable,
+          CoordinatorAction.expandHistoryStretchable,
+          CoordinatorAction.maximizeHistory
         ]),
         duration: ProfileExpansion.totalTime,
-        callback: () => {
-          this.profile.maximize();
-        }
+        callback: this.profile.maximize.bind(this.profile)
       })
     );
 
@@ -65,12 +83,49 @@ export default class Coordinator {
     });
   }
 
+  private attachHistoryStretchableHandler(stretchable: Stretchable): void {
+    const expandStretchable = this.lock.wrap({
+      key: CoordinatorAction.expandHistoryStretchable,
+      lockedOutKeys: new Set([
+        CoordinatorAction.normalize,
+        CoordinatorAction.expandProfileStretchable,
+        CoordinatorAction.maximizeProfile
+      ]),
+      duration: ProfileExpansion.transitionTime,
+      callback: () => {
+        this.history.expand(stretchable);
+      }
+    });
+    const maximizeHistory = runIf(
+      () => !this.history.isMaximized,
+      this.lock.wrap({
+        key: CoordinatorAction.maximizeHistory,
+        lockedOutKeys: new Set([
+          CoordinatorAction.normalize,
+          CoordinatorAction.expandHistoryStretchable,
+          CoordinatorAction.expandProfileStretchable,
+          CoordinatorAction.maximizeProfile
+        ]),
+        duration: ProfileExpansion.totalTime,
+        callback: this.history.maximize.bind(this.history)
+      })
+    );
+
+    stretchable.overlay.addEventListener("click", () => {
+      expandStretchable();
+      maximizeHistory();
+    });
+  }
+
   normalize(): void {
+    this.history.normalize();
     this.profile.normalize();
   }
 }
 
 enum CoordinatorAction {
+  expandHistoryStretchable,
+  maximizeHistory,
   expandProfileStretchable,
   maximizeProfile,
   normalize
