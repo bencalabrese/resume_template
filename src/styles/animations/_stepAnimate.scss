@@ -1,0 +1,53 @@
+$transition-time: 1.5s;
+$empty-list: ();
+
+@mixin step-animate($selector, $styles, $special) {
+  $total-steps: 3;
+  $transition: "";
+  $reverse-transition: "";
+  $total-time: $transition-time * $total-steps;
+
+  @each $style in $styles {
+    $property: map-get(
+      $map: $style,
+      $key: "property"
+    );
+    $step: map-get(
+      $map: $style,
+      $key: "step"
+    );
+
+    @if ($transition != "") {
+      $transition: $transition + ", ";
+    }
+
+    @if ($reverse-transition != "") {
+      $reverse-transition: $reverse-transition + ", ";
+    }
+
+    $base-transition: "#{$property} #{$transition-time} ease ";
+    $delay: $transition-time * ($step - 1);
+    $reverse-delay: $total-time - ($step * $transition-time);
+
+    $transition: $transition + $base-transition + #{$delay};
+    $reverse-transition: $reverse-transition +
+      $base-transition +
+      #{$reverse-delay};
+  }
+
+  #{$selector} {
+    transition: #{$transition};
+  }
+
+  &.reverse {
+    #{$selector} {
+      transition: #{$reverse-transition};
+    }
+  }
+
+  &.#{$special} {
+    #{$selector} {
+      @content;
+    }
+  }
+}
