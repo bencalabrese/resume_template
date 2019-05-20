@@ -24,6 +24,10 @@
   > :nth-child(3) * {
     @include in-out(1s);
   }
+
+  &.reversed {
+    transform: scaleX(-1);
+  }
 }
 
 .has-overlay {

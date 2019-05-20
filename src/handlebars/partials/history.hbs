@@ -1,5 +1,7 @@
 <section class="history enclosure">
-  <section class="experience">
+  <section class="experience stretchable has-overlay">
+    {{> overlay isReversed=true}}
+
     <h3>Experience</h3>
     {{#each experiences as |experience|}}
       {{>project experience}}
@@ -8,7 +10,9 @@
 
   <div class="divider"></div>
 
-  <section class="projects">
+  <section class="projects stretchable has-overlay">
+    {{> overlay isReversed=true}}
+
     <h3>Projects</h3>
     {{#each projects as |project|}}
       {{>project project}}
