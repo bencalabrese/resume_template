@@ -8,11 +8,17 @@
     opacity: 0;
   }
 
-  .contact {
+  .about {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: relative;
+
+    .initially-collapsed-heading img {
+      border-radius: 15px;
+      width: 160px;
+      height: 160px;
+    }
 
     .profile-links {
       padding-top: 0.0875in;
@@ -32,16 +38,12 @@
       }
     }
 
-    .headshot-and-about-me {
+    .cover-letter {
       position: absolute;
+      left: 0;
       text-align: left;
       top: calc(20px + 0.175in);
-
-      img {
-        width: 350px;
-        border-radius: 15px;
-        margin-bottom: 0.25in;
-      }
+      max-width: 360px;
     }
   }
 

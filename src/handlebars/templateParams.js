@@ -1,5 +1,4 @@
 export default {
-  name: "Ben Calabrese",
   contact: {
     phone: "(619) 208-8943",
     email: "bencalabrese@gmail.com",
