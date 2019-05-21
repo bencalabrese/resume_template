@@ -1,0 +1,45 @@
+@import "stepAnimate";
+
+main {
+  @include step-animate(
+    ".right-column",
+    append(
+      $empty-list,
+      (
+        "property": "min-width",
+        "step": 2
+      )
+    ),
+    "expanded-history"
+  ) {
+    min-width: 100%;
+  }
+
+  @include step-animate(
+    ".columns",
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 2
+      )
+    ),
+    "expanded-history"
+  ) {
+    transform: translateX(-2.5in);
+  }
+
+  @include step-animate(
+    ".left-column",
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 2
+      )
+    ),
+    "expanded-history"
+  ) {
+    transform: translateX(-1in);
+  }
+}
