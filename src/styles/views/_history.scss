@@ -1,5 +1,7 @@
 .history {
   transition: 1.5s;
+  display: flex;
+  flex-direction: column;
 
   header {
     display: flex;
