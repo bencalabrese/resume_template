@@ -8,10 +8,27 @@
     justify-content: space-between;
   }
 
+  .experience,
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .description {
     padding-left: 0.75em;
     padding-bottom: 0.125em;
     display: flex;
     justify-content: space-between;
+  }
+
+  .chunks {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .history-chunk {
+      flex-grow: 1;
+    }
   }
 }
