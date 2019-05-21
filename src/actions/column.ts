@@ -20,20 +20,31 @@ export default class Column {
     );
   }
 
+  private get reverseClass(): string {
+    return `reverse-${this.expansionClass}`;
+  }
+
+  private get forwardClass(): string {
+    return `forward-${this.expansionClass}`;
+  }
+
   private minimize(): void {
-    this.main.classList.add("reverse");
-    this.main.classList.remove(this.expansionClass);
+    this.main.classList.add(this.reverseClass);
+    this.main.classList.remove(this.forwardClass);
     this._isMaximized = false;
 
     // setTimeout is more consistent than transitionend
     setTimeout(() => {
       this.stretchables.forEach(stretchable => stretchable.normalize());
     }, ProfileExpansion.reverseDelay(1));
+    setTimeout(() => {
+      this.main.classList.remove(this.reverseClass);
+    }, ProfileExpansion.totalTime);
   }
 
   maximize(): void {
-    this.main.classList.remove("reverse");
-    this.main.classList.add(this.expansionClass);
+    this.main.classList.remove(this.reverseClass);
+    this.main.classList.add(this.forwardClass);
     this._isMaximized = true;
   }
 

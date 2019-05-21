@@ -35,19 +35,16 @@ $empty-list: ();
       #{$reverse-delay};
   }
 
-  #{$selector} {
-    transition: #{$transition};
-  }
-
-  &.reverse {
+  &.forward-#{$special} {
     #{$selector} {
-      transition: #{$reverse-transition};
+      transition: #{$transition};
+      @content;
     }
   }
 
-  &.#{$special} {
+  &.reverse-#{$special} {
     #{$selector} {
-      @content;
+      transition: #{$reverse-transition};
     }
   }
 }

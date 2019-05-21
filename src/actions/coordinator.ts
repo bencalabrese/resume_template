@@ -36,11 +36,13 @@ export default class Coordinator {
         callback: (event: MouseEvent) => {
           const target = event.target as HTMLElement;
 
-          if (
-            (this.profile.isMaximized && !target.matches(".profile *")) ||
-            (this.history.isMaximized && !target.matches(".history *"))
+          if (this.profile.isMaximized && !target.matches(".profile *")) {
+            this.profile.normalize();
+          } else if (
+            this.history.isMaximized &&
+            !target.matches(".history *")
           ) {
-            this.normalize();
+            this.history.normalize();
           }
         }
       })
@@ -115,11 +117,6 @@ export default class Coordinator {
       expandStretchable();
       maximizeHistory();
     });
-  }
-
-  normalize(): void {
-    this.history.normalize();
-    this.profile.normalize();
   }
 }
 
