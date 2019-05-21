@@ -44,20 +44,6 @@ main {
   }
 
   @include step-animate(
-    ".left-column .initially-hidden",
-    append(
-      $empty-list,
-      (
-        "property": "opacity",
-        "step": 3
-      )
-    ),
-    "expanded-profile"
-  ) {
-    opacity: 1;
-  }
-
-  @include step-animate(
     ".has-initially-collapsed-heading .initially-collapsed-heading",
     (
       ("property": "max-height", "step": 1),

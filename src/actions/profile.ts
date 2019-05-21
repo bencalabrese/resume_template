@@ -1,4 +1,4 @@
-import fixWidth from "../utils/fix_width";
+import { fixWidth } from "../utils/fix_width";
 import Column from "./column";
 
 export default class Profile extends Column {

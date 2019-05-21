@@ -1,0 +1,31 @@
+@import "stepAnimate";
+
+main {
+  @include step-animate(
+    ".initially-hidden",
+    append(
+      $empty-list,
+      (
+        "property": "opacity",
+        "step": 3
+      )
+    ),
+    "expanded-profile"
+  ) {
+    opacity: 1;
+  }
+
+  @include step-animate(
+    ".initially-hidden",
+    append(
+      $empty-list,
+      (
+        "property": "opacity",
+        "step": 3
+      )
+    ),
+    "expanded-history"
+  ) {
+    opacity: 1;
+  }
+}
