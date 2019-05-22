@@ -48,7 +48,8 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet."
-      ]
+      ],
+      img: "google.svg"
     },
     {
       name: "App Academy",
@@ -56,7 +57,8 @@ export default {
       bullets: [
         "Crafted new Ruby and Javascript curriculum and RSpec " +
           "testing suites"
-      ]
+      ],
+      img: "google.svg"
     }
   ],
   projects: [
@@ -74,7 +76,8 @@ export default {
         "Nearly pure HTML/CSS with a little jQuery",
         "Animations and click events for the web while still styled for print",
         "Parameterized for easy editing and reuse"
-      ]
+      ],
+      img: "resume.gif"
     },
     {
       name: "Constellations",
@@ -90,7 +93,8 @@ export default {
         "Implemented HTML5 canvas rendering with controls for " +
           "pan, zoom, and adjusting cycle speed",
         "Bound UI events in jQuery for user manipulation of grid"
-      ]
+      ],
+      img: "constellations.gif"
     },
     {
       name: "PickupTix",
@@ -103,7 +107,8 @@ export default {
           "efficient SQL query across multiple criteria",
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
-      ]
+      ],
+      img: "pickup_tix.gif"
     }
   ]
 };
