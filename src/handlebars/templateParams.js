@@ -58,7 +58,7 @@ export default {
         "Crafted new Ruby and Javascript curriculum and RSpec " +
           "testing suites"
       ],
-      img: "google.svg"
+      img: "app_academy_badge_logo.png"
     }
   ],
   projects: [
