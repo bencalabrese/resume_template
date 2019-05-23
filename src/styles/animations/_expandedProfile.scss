@@ -6,13 +6,13 @@ main {
     append(
       $empty-list,
       (
-        "property": "min-width",
+        "property": "width",
         "step": 2
       )
     ),
     "expanded-profile"
   ) {
-    min-width: 100%;
+    width: 100%;
   }
 
   @include step-animate(
@@ -68,6 +68,6 @@ main {
     ),
     "expanded-profile"
   ) {
-    transform: translateX(1in);
+    transform: translateX(5in);
   }
 }

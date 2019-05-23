@@ -16,12 +16,14 @@ main {
 }
 
 .columns {
-  display: flex;
+  position: relative;
   height: 7.875in;
 }
 
 .left-column,
 .right-column {
+  height: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
 
@@ -36,10 +38,11 @@ main {
 }
 
 .left-column {
-  min-width: 2.25in;
+  width: 2.25in;
   margin-right: 0.25in;
 }
 
 .right-column {
-  min-width: calc(100% - 2.5in);
+  right: 0;
+  width: calc(100% - 2.5in);
 }

@@ -6,27 +6,13 @@ main {
     append(
       $empty-list,
       (
-        "property": "min-width",
+        "property": "width",
         "step": 2
       )
     ),
     "expanded-history"
   ) {
-    min-width: 100%;
-  }
-
-  @include step-animate(
-    ".columns",
-    append(
-      $empty-list,
-      (
-        "property": "transform",
-        "step": 2
-      )
-    ),
-    "expanded-history"
-  ) {
-    transform: translateX(-2.5in);
+    width: 100%;
   }
 
   @include step-animate(
@@ -40,6 +26,6 @@ main {
     ),
     "expanded-history"
   ) {
-    transform: translateX(-1in);
+    transform: translateX(-3.5in);
   }
 }
