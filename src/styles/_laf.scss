@@ -80,22 +80,6 @@ ul.bulleted {
   }
 }
 
-.end-cap {
-  border-color: red;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 28px;
-  height: calc(100% - (0.667in + 0.25in));
-  background-color: rgba($color: #ff0000, $alpha: 0.5);
-  border-top: 4px solid red;
-  border-bottom: 4px solid red;
-  border-left: 4px solid red;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-sizing: border-box;
-}
-
 @mixin end-cap($side, $height) {
   .end-cap {
     border-color: red;

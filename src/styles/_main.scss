@@ -49,4 +49,6 @@ main {
 .right-column {
   right: 0;
   width: calc(100% - 2.5in);
+
+  @include end-cap($side: "right", $height: 100%);
 }
