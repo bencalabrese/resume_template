@@ -81,18 +81,25 @@ ul.bulleted {
 }
 
 @mixin end-cap($side, $height) {
-  border-color: red;
+  background-color: white;
   bottom: 0;
   #{$side}: 0;
-  position: absolute;
   width: 28px;
+  position: absolute;
   height: $height;
-  background-color: rgba($color: #ff0000, $alpha: 0.5);
-  border-top: $border-width solid red;
-  border-bottom: $border-width solid red;
-  border-#{$side}: $border-width solid red;
-  border-top-#{$side}-radius: 15px;
-  border-bottom-#{$side}-radius: 15px;
-  box-sizing: border-box;
   z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-color: red;
+    border-top: $border-width solid red;
+    border-bottom: $border-width solid red;
+    border-#{$side}: $border-width solid red;
+    border-top-#{$side}-radius: 15px;
+    border-bottom-#{$side}-radius: 15px;
+  }
 }
