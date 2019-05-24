@@ -7,9 +7,10 @@ main {
   background-color: white;
   padding: 1in;
   box-sizing: border-box;
+}
+
+.view-box {
   overflow: hidden;
-  // display: flex;
-  // flex-direction: column;
 }
 
 .top-header {

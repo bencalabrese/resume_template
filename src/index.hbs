@@ -8,34 +8,36 @@
   <body>
 
     <main>
-      <header class="top-header">
-        <section class="title">
-          <h1>Ben Calabrese</h1>
-          <h2 class="subtitle">Web Developer</h2>
-        </section>
-
-        <div class="chevrons-row">
-          <section class="chevrons">
-            <img inline src="{{inlineSvg 'chevron.svg'}}" />
-            <img inline src="{{inlineSvg 'chevron.svg'}}" />
-            <img inline src="{{inlineSvg 'chevron.svg'}}" />
+      <div class="view-box">
+        <header class="top-header">
+          <section class="title">
+            <h1>Ben Calabrese</h1>
+            <h2 class="subtitle">Web Developer</h2>
           </section>
-        </div>
-      </header>
 
-      <div class="columns">
-        <div class="end-cap-left"></div>
-        <div class="end-cap-right"></div>
+          <div class="chevrons-row">
+            <section class="chevrons">
+              <img inline src="{{inlineSvg 'chevron.svg'}}" />
+              <img inline src="{{inlineSvg 'chevron.svg'}}" />
+              <img inline src="{{inlineSvg 'chevron.svg'}}" />
+            </section>
+          </div>
+        </header>
 
-        <div class="left-column">
-          <h2 class="profile-label">Profile</h2>
-          {{>profile this}}
-        </div>
+        <div class="columns">
+          <div class="end-cap-left"></div>
+          <div class="end-cap-right"></div>
 
-        <div class="right-column">
-          {{>history this}}
+          <div class="left-column">
+            <h2 class="profile-label">Profile</h2>
+            {{>profile this}}
+          </div>
+
+          <div class="right-column">
+            {{>history this}}
+          </div>
         </div>
-      </div>
     </main>
+    </div>
   </body>
 {{/withParams}}
