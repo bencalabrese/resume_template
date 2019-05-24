@@ -40,15 +40,19 @@ main {
 .left-column {
   width: 2.25in;
   margin-right: 0.25in;
+}
 
+.right-column {
+  left: calc(#{$left-col-width});
+}
+
+.end-cap-left {
   @include end-cap(
     $side: "left",
     $height: calc(100% - #{$total-profile-label-height})
   );
 }
 
-.right-column {
-  left: calc(#{$left-col-width});
-
+.end-cap-right {
   @include end-cap($side: "right", $height: 100%);
 }
