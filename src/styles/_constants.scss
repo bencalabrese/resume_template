@@ -1,3 +1,16 @@
+$border-width: 4px;
+
+$page-width: 8.5in;
+$page-height: 11in;
+$page-margin: 1in;
+$content-width: "(#{$page-width} - (#{$page-margin} * 2))";
+
+$left-col-width: 2.5in;
+$right-col-width: "(#{$content-width} - #{$left-col-width})";
+
 $profile-label-height: 0.667in;
 $profile-label-bottom-margin: 0.25in;
 $total-profile-label-height: "(#{$profile-label-height} + #{$profile-label-bottom-margin})";
+
+$enclosure-hor-padding: 0.25in;
+$enclosure-hor-border-and-padding: "((#{$border-width} + #{$enclosure-hor-padding}) * 2)";

@@ -26,12 +26,13 @@ main {
 .left-column,
 .right-column {
   height: 100%;
+  width: 100%;
+  bottom: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
 
   > :last-child {
-    margin-bottom: 0;
     flex-grow: 1;
   }
 }
@@ -47,8 +48,7 @@ main {
 }
 
 .right-column {
-  right: 0;
-  width: calc(100% - 2.5in);
+  left: calc(#{$left-col-width});
 
   @include end-cap($side: "right", $height: 100%);
 }
