@@ -28,4 +28,18 @@ main {
   ) {
     transform: translateX(-3.5in);
   }
+
+  @include step-animate(
+    ".right-column .overlay",
+    (
+      // We have to add opacity here to keep from overriding the existing
+        // opacity transition. Opacity is not part of the step animation though,
+        // so no value is set in the @content block.
+        ("property": "opacity", "step": 1),
+      ("property": "width", "step": 2)
+    ),
+    "expanded-history"
+  ) {
+    width: 100%;
+  }
 }

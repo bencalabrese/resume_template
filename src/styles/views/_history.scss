@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
 
+  .overlay {
+    right: unset;
+    width: calc(#{$right-col-content-width});
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -15,7 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(#{$right-col-width} - #{$enclosure-hor-border-and-padding});
+    width: 100%;
   }
 
   .description {
@@ -34,6 +39,10 @@
   .history-chunk {
     flex-grow: 1;
     position: relative;
+
+    .info {
+      width: calc(#{$right-col-width} - #{$enclosure-hor-border-and-padding});
+    }
 
     img {
       position: absolute;

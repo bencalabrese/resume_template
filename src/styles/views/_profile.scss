@@ -7,9 +7,23 @@
   flex-direction: column;
   align-items: flex-end;
 
+  .overlay {
+    left: unset;
+    width: calc(#{$left-col-content-width});
+  }
+
   .about,
   .skills,
   .education {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .about .info,
+  .skills ul,
+  .education .info {
     width: calc(#{$left-col-content-width});
   }
 
@@ -18,9 +32,6 @@
   }
 
   .about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: relative;
 
     .initially-collapsed-heading img {
@@ -57,8 +68,6 @@
   }
 
   .skills {
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
 
     ul {
@@ -68,6 +77,7 @@
       align-items: center;
       grid-template-columns: auto auto;
       text-align: initial;
+      box-sizing: border-box;
 
       li {
         display: flex;
@@ -116,9 +126,6 @@
   }
 
   .education {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: relative;
 
     .schools {

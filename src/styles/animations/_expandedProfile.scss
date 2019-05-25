@@ -16,6 +16,20 @@ main {
   }
 
   @include step-animate(
+    ".left-column .overlay",
+    (
+      // We have to add opacity here to keep from overriding the existing
+        // opacity transition. Opacity is not part of the step animation though,
+        // so no value is set in the @content block.
+        ("property": "opacity", "step": 1),
+      ("property": "width", "step": 2)
+    ),
+    "expanded-profile"
+  ) {
+    width: 100%;
+  }
+
+  @include step-animate(
     ".left-column .skills li .spacer",
     (
       ("property": "flex-grow", "step": 2),
@@ -31,16 +45,11 @@ main {
 
   @include step-animate(
     ".left-column .skills ul",
-    append(
-      $empty-list,
-      (
-        "property": "padding-left",
-        "step": 2
-      )
-    ),
+    (("property": "padding-left", "step": 2), ("property": "width", "step": 2)),
     "expanded-profile"
   ) {
     padding-left: 70px;
+    width: 100%;
   }
 
   @include step-animate(
