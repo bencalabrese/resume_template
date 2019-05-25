@@ -39,12 +39,12 @@ main {
 }
 
 .left-column {
-  width: 2.25in;
   margin-right: 0.25in;
+  right: calc(#{$right-col-width});
 }
 
 .right-column {
-  left: calc(#{$left-col-width});
+  left: calc(#{$left-col-plus-margin});
 }
 
 .end-cap-left {

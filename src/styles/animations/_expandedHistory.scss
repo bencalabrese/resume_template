@@ -6,17 +6,17 @@ main {
     append(
       $empty-list,
       (
-        "property": "width",
+        "property": "transform",
         "step": 2
       )
     ),
     "expanded-history"
   ) {
-    width: 100%;
+    transform: translateX(-2.5in);
   }
 
   @include step-animate(
-    ".left-column",
+    ".left-column, .end-cap-left",
     append(
       $empty-list,
       (
