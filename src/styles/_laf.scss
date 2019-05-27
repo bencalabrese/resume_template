@@ -65,7 +65,7 @@ h4 {
 }
 
 .enclosure {
-  border: $border-width solid blue;
+  border: $border-width solid lightgray;
   border-radius: 15px;
   padding: 0.125in $enclosure-hor-padding;
   box-sizing: border-box;
@@ -96,10 +96,9 @@ ul.bulleted {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    border-color: red;
-    border-top: $border-width solid red;
-    border-bottom: $border-width solid red;
-    border-#{$side}: $border-width solid red;
+    border-top: $border-width solid lightgray;
+    border-bottom: $border-width solid lightgray;
+    border-#{$side}: $border-width solid lightgray;
     border-top-#{$side}-radius: 15px;
     border-bottom-#{$side}-radius: 15px;
   }

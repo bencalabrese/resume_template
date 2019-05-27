@@ -74,10 +74,9 @@
       height: 100%;
       flex-grow: 1;
       display: grid;
-      align-items: center;
+      // align-items: center;
       grid-template-columns: auto auto;
-      text-align: initial;
-      box-sizing: border-box;
+      width: 160px;
 
       li {
         display: flex;
@@ -89,18 +88,24 @@
           min-height: 0px;
         }
 
+        .skill-name {
+          flex-grow: 1;
+          text-align: right;
+        }
+
         img {
           position: absolute;
           height: 40px;
           width: 40px;
+          left: -60px;
         }
       }
     }
 
     .skill-level {
       position: absolute;
-      bottom: 0;
-      left: 60px;
+      top: 25px;
+      right: 0;
       display: flex;
 
       span {
@@ -120,6 +125,10 @@
         }
         &:nth-child(4) {
           background-color: #57bb8a;
+        }
+
+        &:last-child {
+          margin: 0;
         }
       }
     }

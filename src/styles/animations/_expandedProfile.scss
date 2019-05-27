@@ -48,8 +48,8 @@ main {
     (("property": "padding-left", "step": 2), ("property": "width", "step": 2)),
     "expanded-profile"
   ) {
-    padding-left: 70px;
-    width: 100%;
+    // padding-left: 70px;
+    // width: 100%;
   }
 
   @include step-animate(
