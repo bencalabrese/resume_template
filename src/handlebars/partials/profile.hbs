@@ -15,7 +15,9 @@
     {{> overlay}}
     <ul class="extra-spacing">
       {{#each skills as |skill|}}
-        {{>skill skill}}
+        <li class={{#ifEven @index}}"left"{{else}}"right"{{/ifEven}}>
+          {{>skill skill}}
+        </li>
       {{/each}}
     </ul>
   </section>
