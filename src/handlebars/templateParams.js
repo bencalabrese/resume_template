@@ -77,7 +77,7 @@ export default {
         "Animations and click events for the web while still styled for print",
         "Parameterized for easy editing and reuse"
       ],
-      img: "app_academy_badge_logo.png"
+      img: "resume.gif"
     },
     {
       name: "Constellations",
@@ -94,7 +94,7 @@ export default {
           "pan, zoom, and adjusting cycle speed",
         "Bound UI events in jQuery for user manipulation of grid"
       ],
-      img: "app_academy_badge_logo.png"
+      img: "constellations.gif"
     },
     {
       name: "PickupTix",
@@ -108,7 +108,7 @@ export default {
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
       ],
-      img: "app_academy_badge_logo.png"
+      img: "pickup_tix.gif"
     }
   ]
 };
