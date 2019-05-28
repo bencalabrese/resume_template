@@ -1,5 +1,7 @@
+@import "constants";
+
 .stretchable {
-  transition: 1.5s;
+  transition: $transition-time;
   overflow: hidden;
 
   &.expanded {

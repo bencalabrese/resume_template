@@ -1,4 +1,5 @@
 @import "animations/inOut";
+@import "constants";
 
 .overlay {
   pointer-events: none;
@@ -14,17 +15,7 @@
   justify-content: space-around;
   background-color: rgba($color: white, $alpha: 0.7);
   opacity: 0;
-  transition: opacity 1.5s;
-
-  > :nth-child(1) path {
-    @include in-out(0.5s);
-  }
-  > :nth-child(2) path {
-    @include in-out(0.75s);
-  }
-  > :nth-child(3) path {
-    @include in-out(1s);
-  }
+  transition: opacity $transition-time;
 
   &.reversed {
     transform: scaleX(-1);
@@ -39,6 +30,16 @@
     cursor: pointer;
 
     &:hover > .overlay {
+      :nth-child(1) path {
+        @include in-out(0.5s);
+      }
+      :nth-child(2) path {
+        @include in-out(0.75s);
+      }
+      :nth-child(3) path {
+        @include in-out(1s);
+      }
+
       pointer-events: auto;
       opacity: 1;
     }

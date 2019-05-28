@@ -1,5 +1,5 @@
 export default class ProfileExpansion {
-  static readonly transitionTime = 1500;
+  static readonly transitionTime = 1000;
   static readonly stepCount = 3;
   static readonly totalTime =
     ProfileExpansion.transitionTime * ProfileExpansion.stepCount;

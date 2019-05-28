@@ -1,4 +1,5 @@
-$transition-time: 1.5s;
+@import "../constants";
+
 $empty-list: ();
 
 @mixin step-animate($selector, $styles, $special) {
