@@ -15,20 +15,6 @@ main {
     transform: translateX(4.25in);
   }
 
-  // @include step-animate(
-  //   ".left-column .overlay",
-  //   (
-  //     // We have to add opacity here to keep from overriding the existing
-  //       // opacity transition. Opacity is not part of the step animation though,
-  //       // so no value is set in the @content block.
-  //       ("property": "opacity", "step": 1),
-  //     ("property": "width", "step": 2)
-  //   ),
-  //   "expanded-profile"
-  // ) {
-  //   width: 100%;
-  // }
-
   @include step-animate(
     ".left-column .skills li.left",
     append(
@@ -83,5 +69,9 @@ main {
     "expanded-profile"
   ) {
     transform: translateX(5in);
+  }
+
+  &.forward-expanded-profile .left-column .overlay {
+    width: 100%;
   }
 }
