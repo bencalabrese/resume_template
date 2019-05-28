@@ -30,7 +30,7 @@ main {
 .left-column,
 .right-column {
   height: 100%;
-  width: 100%;
+  width: calc(100% - 2in);
   bottom: 0;
   position: absolute;
   display: flex;
@@ -42,12 +42,11 @@ main {
 }
 
 .left-column {
-  margin-right: 0.25in;
-  left: calc((-100% + 1in) + 2.25in);
+  left: calc((-100% + 3in) + 2.25in);
 }
 
 .right-column {
-  right: calc((-100% + 1in) + 4in);
+  right: calc((-100% + 3in) + 4in);
 }
 
 .end-cap-left {
