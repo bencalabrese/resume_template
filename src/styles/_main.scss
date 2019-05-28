@@ -5,8 +5,10 @@ main {
   width: 8.5in;
   height: 11in;
   background-color: white;
-  padding: 1in;
+  padding: 1in 0;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .view-box {
@@ -17,6 +19,7 @@ main {
   display: flex;
   justify-content: space-between;
   height: 1.125in;
+  padding: 0 1in;
 }
 
 .columns {
@@ -40,20 +43,20 @@ main {
 
 .left-column {
   margin-right: 0.25in;
-  right: calc(#{$right-col-width});
+  left: calc((-100% + 1in) + 2.25in);
 }
 
 .right-column {
-  left: calc(#{$left-col-plus-margin});
+  right: calc((-100% + 1in) + 4in);
 }
 
 .end-cap-left {
   @include end-cap(
     $side: "left",
-    $height: calc(100% - #{$total-profile-label-height})
+    $height: calc(7.875in - #{$total-profile-label-height})
   );
 }
 
 .end-cap-right {
-  @include end-cap($side: "right", $height: 100%);
+  @include end-cap($side: "right", $height: 7.875in);
 }

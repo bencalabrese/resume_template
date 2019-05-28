@@ -83,9 +83,10 @@ ul.bulleted {
 
 @mixin end-cap($side, $height) {
   background-color: white;
-  bottom: 0;
+  bottom: 1in;
   #{$side}: 0;
   width: 28px;
+  padding-#{$side}: 1in;
   position: absolute;
   height: $height;
   z-index: 1;
@@ -95,7 +96,7 @@ ul.bulleted {
     position: absolute;
     box-sizing: border-box;
     height: 100%;
-    width: 100%;
+    width: 28px;
     border-top: $border-width solid lightgray;
     border-bottom: $border-width solid lightgray;
     border-#{$side}: $border-width solid lightgray;
