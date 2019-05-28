@@ -20,7 +20,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: join(__dirname, "src"),
     watchContentBase: true,
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     disableHostCheck: true
   },
   module: {
@@ -61,7 +61,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      handlebars: "handlebars/runtime.js"
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
