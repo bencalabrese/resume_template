@@ -5,11 +5,13 @@ export default class Stretchable {
 
   private readonly originalHeight: number;
   private readonly isInitiallyGrown: boolean;
+  private readonly videos: HTMLVideoElement[];
 
   constructor(private readonly el: HTMLElement) {
     this.originalHeight = this.el.offsetHeight;
     this.isInitiallyGrown =
       parseFloat(getComputedStyle(this.el).flexGrow) !== 0;
+    this.videos = Array.from(el.querySelectorAll("video"));
 
     // Explicitly set the flex basis to allow smooth transitions.
     this.normalizeHeight();
@@ -38,6 +40,10 @@ export default class Stretchable {
     }
   }
 
+  private play(): void {
+    this.videos.forEach(video => video.play());
+  }
+
   get overlay(): HTMLElement {
     return this.el.querySelector(".overlay");
   }
@@ -56,6 +62,7 @@ export default class Stretchable {
     this.addClass("expanded");
     this.removeClass("collapsed");
     this.normalizeHeight();
+    this.play();
   }
 
   normalize(): void {
