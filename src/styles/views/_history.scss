@@ -27,6 +27,9 @@
     padding-bottom: 0.125em;
     display: flex;
     justify-content: space-between;
+    // Kick this out a little since right-aligned italics are always masked
+    // by overflow: hidden.
+    padding-right: 0.25em;
   }
 
   .chunks {
