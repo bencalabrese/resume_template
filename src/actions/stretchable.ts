@@ -1,3 +1,5 @@
+import ProfileExpansion from "../utils/profile_expansion";
+
 export default class Stretchable {
   private static readonly headingHeight = document.querySelector(
     "h3:not(.initially-collapsed-heading)"
@@ -44,6 +46,10 @@ export default class Stretchable {
     this.videos.forEach(video => video.play());
   }
 
+  pause(): void {
+    this.videos.forEach(video => video.pause());
+  }
+
   get overlay(): HTMLElement {
     return this.el.querySelector(".overlay");
   }
@@ -56,13 +62,14 @@ export default class Stretchable {
     this.addClass("collapsed");
     this.removeClass("expanded");
     this.flexBasis = Stretchable.headingHeight;
+    this.pause();
   }
 
   expand(): void {
     this.addClass("expanded");
     this.removeClass("collapsed");
     this.normalizeHeight();
-    this.play();
+    setTimeout(this.play.bind(this), ProfileExpansion.transitionTime);
   }
 
   normalize(): void {

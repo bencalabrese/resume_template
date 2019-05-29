@@ -38,11 +38,17 @@ export default class Coordinator {
 
           if (this.profile.isMaximized && !target.matches(".profile *")) {
             this.profile.normalize();
+            this.profile.stretchables.forEach(stretchable =>
+              stretchable.pause()
+            );
           } else if (
             this.history.isMaximized &&
             !target.matches(".history *")
           ) {
             this.history.normalize();
+            this.history.stretchables.forEach(stretchable =>
+              stretchable.pause()
+            );
           }
         }
       })
