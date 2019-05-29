@@ -77,7 +77,7 @@ export default {
         "Animations and click events for the web while still styled for print",
         "Parameterized for easy editing and reuse"
       ],
-      img: "resume.gif"
+      video: "resume.webm"
     },
     {
       name: "Constellations",
@@ -94,7 +94,7 @@ export default {
           "pan, zoom, and adjusting cycle speed",
         "Bound UI events in jQuery for user manipulation of grid"
       ],
-      img: "constellations.gif"
+      video: "constellations.webm"
     },
     {
       name: "PickupTix",
@@ -108,7 +108,7 @@ export default {
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
       ],
-      img: "pickup_tix.gif"
+      video: "pickuptix.webm"
     }
   ]
 };

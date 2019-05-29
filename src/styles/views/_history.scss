@@ -43,7 +43,8 @@
       width: calc(#{$right-col-width} - #{$enclosure-hor-border-and-padding});
     }
 
-    img {
+    img,
+    video {
       position: absolute;
       right: 0;
       top: 0;
