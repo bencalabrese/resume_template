@@ -43,6 +43,11 @@ main {
 
 .left-column {
   left: calc((-100% + 3in) + 2.25in);
+
+  h3 {
+    // Fixes h3s readjusting after animations end
+    justify-content: flex-end;
+  }
 }
 
 .right-column {
