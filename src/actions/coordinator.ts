@@ -1,5 +1,5 @@
+import Expansion from "../utils/expansion";
 import Lock from "../utils/lock";
-import ProfileExpansion from "../utils/profile_expansion";
 import runIf from "../utils/run_if";
 import History from "./history";
 import Profile from "./profile";
@@ -32,7 +32,7 @@ export default class Coordinator {
           CoordinatorAction.expandProfileStretchable,
           CoordinatorAction.maximizeProfile
         ]),
-        duration: ProfileExpansion.totalTime,
+        duration: Expansion.totalTime,
         callback: (event: MouseEvent) => {
           const target = event.target as HTMLElement;
 
@@ -65,7 +65,7 @@ export default class Coordinator {
         CoordinatorAction.expandHistoryStretchable,
         CoordinatorAction.maximizeHistory
       ]),
-      duration: ProfileExpansion.transitionTime,
+      duration: Expansion.transitionTime,
       callback: () => {
         this.profile.expand(stretchable);
       }
@@ -80,7 +80,7 @@ export default class Coordinator {
           CoordinatorAction.expandHistoryStretchable,
           CoordinatorAction.maximizeHistory
         ]),
-        duration: ProfileExpansion.totalTime,
+        duration: Expansion.totalTime,
         callback: this.profile.maximize.bind(this.profile)
       })
     );
@@ -99,7 +99,7 @@ export default class Coordinator {
         CoordinatorAction.expandProfileStretchable,
         CoordinatorAction.maximizeProfile
       ]),
-      duration: ProfileExpansion.transitionTime,
+      duration: Expansion.transitionTime,
       callback: () => {
         this.history.expand(stretchable);
       }
@@ -114,7 +114,7 @@ export default class Coordinator {
           CoordinatorAction.expandProfileStretchable,
           CoordinatorAction.maximizeProfile
         ]),
-        duration: ProfileExpansion.totalTime,
+        duration: Expansion.totalTime,
         callback: this.history.maximize.bind(this.history)
       })
     );

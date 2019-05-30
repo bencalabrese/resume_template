@@ -1,5 +1,5 @@
 import { without } from "lodash";
-import ProfileExpansion from "../utils/profile_expansion";
+import Expansion from "../utils/expansion";
 import Stretchable from "./stretchable";
 
 export default class Column {
@@ -36,10 +36,10 @@ export default class Column {
     // setTimeout is more consistent than transitionend
     setTimeout(() => {
       this.stretchables.forEach(stretchable => stretchable.normalize());
-    }, ProfileExpansion.reverseDelay(1));
+    }, Expansion.reverseDelay(1));
     setTimeout(() => {
       this.main.classList.remove(this.reverseClass);
-    }, ProfileExpansion.totalTime);
+    }, Expansion.totalTime);
   }
 
   maximize(): void {

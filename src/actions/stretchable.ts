@@ -1,4 +1,4 @@
-import ProfileExpansion from "../utils/profile_expansion";
+import Expansion from "../utils/expansion";
 
 export default class Stretchable {
   private static readonly headingHeight = document.querySelector(
@@ -69,7 +69,7 @@ export default class Stretchable {
     this.addClass("expanded");
     this.removeClass("collapsed");
     this.normalizeHeight();
-    setTimeout(this.play.bind(this), ProfileExpansion.transitionTime);
+    setTimeout(this.play.bind(this), Expansion.transitionTime);
   }
 
   normalize(): void {

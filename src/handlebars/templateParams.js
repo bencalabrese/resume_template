@@ -108,7 +108,7 @@ export default {
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
       ],
-      video: "pickuptix.webm"
+      video: "pickup_tix.webm"
     }
   ]
 };

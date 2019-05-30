@@ -1,4 +1,3 @@
-import ProfileExpansion from "./profile_expansion";
 import { flatten } from "lodash";
 
 export default class Lock<T> {
