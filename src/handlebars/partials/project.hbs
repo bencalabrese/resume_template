@@ -23,11 +23,11 @@
     </ul>
   </section>
   {{#if img}}
-    <img src="{{img img}}" class="initially-hidden"></img>
+    <img src="{{asset img}}" class="initially-hidden"></img>
   {{/if}}
   {{#if video}}
-    <video src="{{img video}}" class="initially-hidden" width="160" height="160" loop>
-      <source src="{{img video}}" type="video/webm">
+    <video class="initially-hidden" width="160" height="160" loop>
+      <source src="{{asset video}}" type="video/webm">
     </video>
   {{/if}}
 </div>
