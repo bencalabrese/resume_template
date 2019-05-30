@@ -44,10 +44,15 @@ export default {
       name: "Google",
       descriptors: ["Software Engineer", "Sept. 2016–Present"],
       bullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet."
+        "Lead frontend development on multiple projects, taking them through " +
+          "product design, UX, development, launch, and landing",
+        "Designed key aspects of Greentea, Google's custom CRM, including " +
+          "integration with the support ticket system and tracking of " +
+          "customer centric metrics used by 20k ad sellers",
+        "Member of Dart readability team, one of ~40 engineers selected " +
+          "across Google based on exceptional code review skills",
+        "Co-owner of custom configuration language used to power all tables, " +
+          "forms, and charts in Google Ads and Greentea"
       ],
       img: "google.svg"
     },
@@ -73,9 +78,8 @@ export default {
       ],
       descriptors: ["You're reading it!"],
       bullets: [
-        "Nearly pure HTML/CSS with a little jQuery",
-        "Animations and click events for the web while still styled for print",
-        "Parameterized for easy editing and reuse"
+        "Hand rolled HTML/Sass/Typescript",
+        "Animations for the web while still styled for print"
       ],
       video: "resume.webm"
     },
@@ -88,11 +92,11 @@ export default {
           url: "https://github.com/bencalabrese/Constellations"
         }
       ],
-      descriptors: ["Conway's Game of Life simulator built in Javascript"],
+      descriptors: ["Conway's Game of Life simulator"],
       bullets: [
         "Implemented HTML5 canvas rendering with controls for " +
-          "pan, zoom, and adjusting cycle speed",
-        "Bound UI events in jQuery for user manipulation of grid"
+          "pan, zoom, and cycle speed",
+        "Bound UI events in jQuery for user manipulation"
       ],
       video: "constellations.webm"
     },
@@ -103,8 +107,8 @@ export default {
       ],
       descriptors: ["Fullstack event ticketing app built in Rails and React"],
       bullets: [
-        "Build a dynamic show filter using ActiveRecord to run a single " +
-          "efficient SQL query across multiple criteria",
+        "Build a dynamic show filter using ActiveRecord to combine arbitrary " +
+          "filter options into a single query",
         "Mapped JSON data to build interactive seat picker for more engaging " +
           "point-and-click UI"
       ],
