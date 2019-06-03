@@ -1,3 +1,5 @@
+@import "constants";
+
 * {
   transition: none !important;
   -webkit-transition: none !important;
@@ -7,4 +9,19 @@
 
 @page {
   margin: 0;
+}
+
+.end-cap-left,
+.end-cap-right {
+  display: none;
+}
+
+.left-column {
+  width: $left-col-width;
+  left: $page-margin;
+}
+
+.right-column {
+  width: calc(#{$right-col-width});
+  right: $page-margin;
 }
