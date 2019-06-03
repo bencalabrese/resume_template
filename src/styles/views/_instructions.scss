@@ -1,3 +1,5 @@
+@import "../animations/index";
+
 .instructions-container {
   display: flex;
   position: absolute;
@@ -22,12 +24,14 @@
   .instructions {
     position: absolute;
     border-radius: 15px;
-
+    opacity: 0;
     top: 1in;
     right: 0;
     background-color: white;
     width: 2in;
     padding: 0.25in;
     box-sizing: border-box;
+
+    animation: bounce-in 0.65s 2s forwards;
   }
 }
