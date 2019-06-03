@@ -1,9 +1,8 @@
 import Expansion from "../utils/expansion";
 
 export default class Stretchable {
-  private static readonly headingHeight = document.querySelector(
-    "h3:not(.initially-collapsed-heading)"
-  ).scrollHeight;
+  private static readonly headingHeight = document.querySelector("h3")
+    .scrollHeight;
 
   private readonly originalHeight: number;
   private readonly isInitiallyGrown: boolean;
