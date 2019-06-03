@@ -6,39 +6,48 @@
   </head>
 
   <body>
+    <div class="instructions-container">
+      <div class="left">
+        <div class="instructions">
+          <p>Click the different sections to see more information.</p>
+          <br />
+          <p>Click outside of that section to collapse again.</p>
+        </div>
+      </div>
+
+      <div class="middle"></div>
+      <div class="right"></div>
+    </div>
 
     <main>
-      <div class="view-box">
-        <header class="top-header">
-          <section class="title">
-            <h1>Ben Calabrese</h1>
-            <h2 class="subtitle">Web Developer</h2>
+      <header class="top-header">
+        <section class="title">
+          <h1>Ben Calabrese</h1>
+          <h2 class="subtitle">Web Developer</h2>
+        </section>
+
+        <div class="chevrons-row">
+          <section class="chevrons">
+            <img inline src="{{inlineSvg 'chevron.svg'}}" />
+            <img inline src="{{inlineSvg 'chevron.svg'}}" />
+            <img inline src="{{inlineSvg 'chevron.svg'}}" />
           </section>
+        </div>
+      </header>
 
-          <div class="chevrons-row">
-            <section class="chevrons">
-              <img inline src="{{inlineSvg 'chevron.svg'}}" />
-              <img inline src="{{inlineSvg 'chevron.svg'}}" />
-              <img inline src="{{inlineSvg 'chevron.svg'}}" />
-            </section>
-          </div>
-        </header>
+      <div class="end-cap-left"></div>
+      <div class="end-cap-right"></div>
 
-        <div class="end-cap-left"></div>
-        <div class="end-cap-right"></div>
+      <div class="columns">
 
-        <div class="columns">
+        <div class="left-column">
+          <h2 class="profile-label">Profile</h2>
+          {{>profile this}}
+        </div>
 
-          <div class="left-column">
-            <h2 class="profile-label">Profile</h2>
-            {{>profile this}}
-          </div>
-
-          <div class="right-column">
-            {{>history this}}
-          </div>
+        <div class="right-column">
+          {{>history this}}
         </div>
     </main>
-    </div>
   </body>
 {{/withParams}}

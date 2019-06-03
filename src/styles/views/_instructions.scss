@@ -1,0 +1,33 @@
+.instructions-container {
+  display: flex;
+  position: absolute;
+  height: 11in;
+  width: 100%;
+
+  .middle {
+    min-width: 8.5in;
+    flex-shrink: 0;
+  }
+
+  .left,
+  .right {
+    flex-grow: 1;
+    margin-right: 0.5in;
+  }
+
+  .left {
+    position: relative;
+  }
+
+  .instructions {
+    position: absolute;
+    border-radius: 15px;
+
+    top: 1in;
+    right: 0;
+    background-color: white;
+    width: 2in;
+    padding: 0.25in;
+    box-sizing: border-box;
+  }
+}
