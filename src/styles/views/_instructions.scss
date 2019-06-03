@@ -25,7 +25,7 @@
     position: absolute;
     border-radius: 15px;
     opacity: 0;
-    top: 1in;
+    top: 3in;
     right: 0;
     background-color: white;
     width: 2in;
@@ -33,5 +33,12 @@
     box-sizing: border-box;
 
     animation: bounce-in 0.65s 2s forwards;
+  }
+
+  svg {
+    width: 2in;
+    position: absolute;
+    right: 0;
+    top: 2in;
   }
 }
