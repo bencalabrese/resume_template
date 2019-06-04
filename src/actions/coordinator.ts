@@ -36,6 +36,8 @@ export default class Coordinator {
         callback: (event: MouseEvent) => {
           const target = event.target as HTMLElement;
 
+          if (target.matches(".close")) return;
+
           if (this.profile.isMaximized && !target.matches(".profile *")) {
             this.profile.normalize();
             this.profile.stretchables.forEach(stretchable =>
