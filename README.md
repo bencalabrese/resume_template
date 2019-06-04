@@ -8,5 +8,4 @@ TODOs
 - Docs
 - Links to schools
 - Hidden project bullets
-- Instructions for interaction
 - Fix firefox text color on print
