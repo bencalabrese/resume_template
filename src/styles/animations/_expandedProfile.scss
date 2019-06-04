@@ -17,30 +17,24 @@ main {
 
   @include step-animate(
     ".left-column .skills li.left",
-    append(
-      $empty-list,
-      (
-        "property": "transform",
-        "step": 2
-      )
+    (
+      ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
     ),
     "expanded-profile"
   ) {
     transform: translateX(-2.75in);
+    min-height: 40px;
   }
 
   @include step-animate(
     ".left-column .skills li.right",
-    append(
-      $empty-list,
-      (
-        "property": "transform",
-        "step": 2
-      )
+    (
+      ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
     ),
     "expanded-profile"
   ) {
     transform: translateX(-1in);
+    min-height: 40px;
   }
 
   @include step-animate(
