@@ -50,8 +50,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|webm)$/,
-        use: ["file-loader"]
+        test: /\.(png|svg|jpg|webm|pdf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: { name: "[name].[ext]" }
+          }
+        ]
       },
       {
         test: /\.tsx?$/,
