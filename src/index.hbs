@@ -6,35 +6,7 @@
   </head>
 
   <body>
-    <div class="instructions-container">
-      <div class="left">
-        <div class="instructions">
-          <div class="close">&#10060;</div>
-
-          <p>Click the different sections to see more information.</p>
-          <br />
-          <p>Click outside of that section to collapse again.</p>
-
-          <img inline src="{{inlineSvg 'instruction_arrow.svg'}}" />
-        </div>
-      </div>
-
-      <div class="middle"></div>
-
-      <div class="right">
-        <div class="instructions">
-          <div class="close">&#10060;</div>
-
-          <p>Designed for web, print, or PDF.</p>
-          <br />
-          <a href="{{asset "Ben Calabrese Resume.pdf"}}" download>
-            Too much hassle? Download a PDF here.
-          </a>
-
-          <img inline src="{{inlineSvg 'instruction_arrow.svg'}}" />
-        </div>
-      </div>
-    </div>
+    {{>instructions}}
 
     <main>
       <header class="top-header">
