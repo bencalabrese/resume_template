@@ -17,23 +17,43 @@ main {
 
   @include step-animate(
     ".left-column .skills li > div:first-child",
-    (
-      ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 2
+      )
     ),
     "expanded-profile"
   ) {
     transform: translateX(-2.75in);
-    min-height: 40px;
   }
 
   @include step-animate(
     ".left-column .skills li > div:last-child",
-    (
-      ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
+    append(
+      $empty-list,
+      (
+        "property": "transform",
+        "step": 2
+      )
     ),
     "expanded-profile"
   ) {
     transform: translateX(-1in);
+  }
+
+  @include step-animate(
+    ".left-column .skills li",
+    append(
+      $empty-list,
+      (
+        "property": "min-height",
+        "step": 3
+      )
+    ),
+    "expanded-profile"
+  ) {
     min-height: 40px;
   }
 
