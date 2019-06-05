@@ -14,15 +14,18 @@ export default class Lock<T> {
     key,
     lockedOutKeys,
     duration,
+    canRun,
     callback
   }: {
     key: T;
     lockedOutKeys: ReadonlySet<T>;
     duration: number;
+    canRun: (...args: any[]) => boolean;
     callback: (...args: any[]) => void;
   }): (...args: any[]) => void {
     return ((...args: any[]) => {
       if (this.lockedOutKeys.has(key)) return;
+      if (!canRun(...args)) return;
       this.lockouts.set(key, lockedOutKeys);
 
       callback(...args);
