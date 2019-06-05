@@ -50,7 +50,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|webm|pdf)$/,
+        test: /\.(png|svg|jpg|webm|pdf|ico)$/,
         use: [
           {
             loader: "file-loader",
@@ -74,7 +74,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: "index.hbs"
+      template: "index.hbs",
+      favicon: "assets/favicon.ico"
     }),
     new HtmlWebpackInlineSVGPlugin({ runPreEmit: true }),
     new MiniCssExtractPlugin()
