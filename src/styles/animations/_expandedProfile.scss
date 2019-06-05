@@ -16,7 +16,7 @@ main {
   }
 
   @include step-animate(
-    ".left-column .skills li.left",
+    ".left-column .skills li > div:first-child",
     (
       ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
     ),
@@ -27,7 +27,7 @@ main {
   }
 
   @include step-animate(
-    ".left-column .skills li.right",
+    ".left-column .skills li > div:last-child",
     (
       ("property": "transform", "step": 2) ("property": "min-height", "step": 3)
     ),

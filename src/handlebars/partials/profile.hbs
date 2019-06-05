@@ -14,9 +14,11 @@
     <h3>Skills</h3>
     {{> overlay}}
     <ul class="extra-spacing">
-      {{#each skills as |skill|}}
-        <li class={{#ifEven @index}}"left"{{else}}"right"{{/ifEven}}>
-          {{>skill skill}}
+      {{#each (chunk skills 2) as |tuple|}}
+        <li>
+          {{#each tuple as |skill|}}
+            {{>skill skill}}
+          {{/each}}
         </li>
       {{/each}}
     </ul>

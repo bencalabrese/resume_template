@@ -72,19 +72,19 @@
 
     ul {
       flex-grow: 1;
-      display: grid;
-      grid-template-columns: auto auto;
+      display: flex;
+      flex-direction: column;
       width: 160px;
 
       li {
         display: flex;
         position: relative;
-        width: 80px;
+        width: 100%;
+        flex-grow: 1;
 
-        .spacer {
-          flex-grow: 1;
-          min-width: 0px;
-          min-height: 0px;
+        > div {
+          width: 50%;
+          position: relative;
         }
 
         .skill-name {
