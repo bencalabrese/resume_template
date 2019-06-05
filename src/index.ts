@@ -4,8 +4,13 @@ import Coordinator from "./actions/coordinator";
 import Instructions from "./actions/instructions";
 
 new Coordinator();
-const instructions = new Instructions();
+const interactionInstructions = new Instructions(".left .instructions");
+const printInstructions = new Instructions(".right .instructions");
 
 setTimeout(() => {
-  instructions.in();
+  interactionInstructions.in();
 }, 2000);
+
+setTimeout(() => {
+  printInstructions.in();
+}, 2700);

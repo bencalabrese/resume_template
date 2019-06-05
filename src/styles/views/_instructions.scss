@@ -14,18 +14,38 @@
   .left,
   .right {
     flex-grow: 1;
-    margin-right: 0.5in;
+    margin: 0.5in;
+    position: relative;
   }
 
   .left {
-    position: relative;
+    .instructions {
+      top: 3in;
+      right: 0;
+    }
+
+    svg {
+      left: 0;
+      bottom: -100%;
+    }
+  }
+
+  .right {
+    .instructions {
+      bottom: 1in;
+      left: 0;
+    }
+
+    svg {
+      right: 0;
+      top: -100%;
+      transform: rotate(180deg);
+    }
   }
 
   .instructions {
     position: absolute;
     border-radius: 15px;
-    top: 3in;
-    right: 0;
     background-color: white;
     width: 2in;
     padding: 0.25in;
@@ -44,10 +64,8 @@
   }
 
   svg {
-    width: 2in;
+    width: 100%;
     position: absolute;
-    left: 0;
-    bottom: -100%;
   }
 
   .close {

@@ -1,9 +1,8 @@
 export default class Instructions {
-  private readonly instructions: HTMLElement = document.querySelector(
-    ".instructions"
-  );
+  private readonly instructions: HTMLElement;
 
-  constructor() {
+  constructor(selector: string) {
+    this.instructions = document.querySelector(selector);
     const close = this.instructions.querySelector(".close");
     close.addEventListener("click", this.out.bind(this));
   }
