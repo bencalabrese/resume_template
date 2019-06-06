@@ -1,6 +1,15 @@
 @import "laf";
 @import "constants";
 
+// Fixes odd issue where elements transition on page load. This issue only
+// occurs intermittently and seemingly only from certain types of links.
+//
+// We solve here by enforcing 0 transition time until a delay after page load.
+// Not an ideal solution, but dev time is better spent on other problems.
+body.hidden * {
+  transition-duration: 0s !important;
+}
+
 main {
   width: 8.5in;
   height: 11in;
@@ -32,10 +41,6 @@ main {
   position: absolute;
   display: flex;
   flex-direction: column;
-
-  > :last-child {
-    flex-grow: 1;
-  }
 }
 
 .left-column {
@@ -45,10 +50,18 @@ main {
     // Fixes h3s readjusting after animations end
     justify-content: flex-end;
   }
+
+  .enclosure {
+    height: calc(7.875in - #{$total-profile-label-height});
+  }
 }
 
 .right-column {
   right: calc((-100% + 3in) + 4in);
+
+  .enclosure {
+    height: 7.875in;
+  }
 }
 
 .end-cap-left {
