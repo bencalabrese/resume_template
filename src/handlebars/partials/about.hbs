@@ -6,7 +6,7 @@
     {{!-- flexbox uses reverse order to maintain styling --}}
     {{#each (reverse links) }}
       <a target="_blank" href="{{ url }}">
-        <img inline src="{{inlineSvg icon}}"></img>
+        <i class="{{icon}}"></i>&nbsp;
         <p>{{name}}</p>
       </a>
     {{/each}}

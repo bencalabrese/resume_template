@@ -6,17 +6,17 @@ export default {
     links: [
       {
         name: "Portfolio",
-        icon: "folder.svg",
+        icon: "fas fa-folder",
         url: "http://www.bencalabrese.com"
       },
       {
         name: "LinkedIn",
-        icon: "linkedin.svg",
+        icon: "fab fa-linkedin",
         url: "https://www.linkedin.com/in/bcalabrese/"
       },
       {
         name: "Github",
-        icon: "github.svg",
+        icon: "fab fa-github",
         url: "https://github.com/bencalabrese"
       }
     ]
