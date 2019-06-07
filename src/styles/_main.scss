@@ -6,8 +6,11 @@
 //
 // We solve here by enforcing 0 transition time until a delay after page load.
 // Not an ideal solution, but dev time is better spent on other problems.
-body.hidden * {
-  transition-duration: 0s !important;
+//
+// This is a known Chrome bug tracked in
+// https://bugs.chromium.org/p/chromium/issues/detail?id=332189
+body.force-no-transition * {
+  transition: none !important;
 }
 
 main {
