@@ -18,7 +18,12 @@
     </p>
     <ul class="bulleted">
       {{#each bullets as |bullet|}}
-        <li>{{bullet.text}}</li>
+        <li>{{bullet}}</li>
+      {{/each}}
+    </ul>
+    <ul class="bulleted initially-hidden initially-collapsed-bullets">
+      {{#each collapsedBullets as |bullet|}}
+        <li>{{bullet}}</li>
       {{/each}}
     </ul>
   </section>

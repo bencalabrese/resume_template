@@ -44,15 +44,19 @@ export default {
       name: "YouTube",
       descriptors: ["Senior Software Engineer", "July 2019–Present"],
       bullets: [
-        {text: "Tech lead of the YouTube Kids living room app, supporting smart " +
-          "TVs, cable boxes, and streaming dongles"},
-        {text: "Designed and led full rewrite of client to use more resilient and " +
-          "performant UI framework"},
-        {text: "Initiated and led cross-org project to support Lottie animations on " +
-          "living room devices"},
-        {text: "Author of Google-wide best practices on screenshot testing"},
-        {text: "Member of Dart readability team, one of ~40 engineers selected " +
-          "across Google based on exceptional code review skills"},
+        "Tech lead of the YouTube Kids living room app, supporting smart " +
+          "TVs, cable boxes, and streaming dongles",
+        "Designed and led full rewrite of client to use more resilient and " +
+          "performant UI framework",
+        "Initiated and led cross-org project to support Lottie animations on " +
+          "living room devices",
+        "Author of Google-wide best practices on screenshot testing",
+        "Member of Dart readability team, one of ~40 engineers selected " +
+          "across Google based on exceptional code review skills",
+      ],
+      collapsedBullets: [
+        "Also other stuff",
+        "Also other stuff",
       ],
       img: "google.svg"
     },
@@ -60,13 +64,18 @@ export default {
       name: "Google",
       descriptors: ["Software Engineer", "Sept. 2016–July 2019"],
       bullets: [
-        {text: "Led frontend development on multiple projects, taking them through " +
-          "product design, UX, development, launch, and landing"},
-        {text: "Designed key aspects of Greentea, Google's custom CRM, including " +
+        "Led frontend development on multiple projects, taking them through " +
+          "product design, UX, development, launch, and landing",
+        "Designed key aspects of Greentea, Google's custom CRM, including " +
           "integration with the support ticket system and tracking of " +
-          "customer centric metrics used by 20k ad sellers"},
-        {text: "Co-owner of custom configuration language used to power all tables, " +
-          "forms, and charts in Google Ads and Greentea"}
+          "customer centric metrics used by 20k ad sellers",
+        "Co-owner of custom configuration language used to power all tables, " +
+          "forms, and charts in Google Ads and Greentea",
+
+        ],
+      collapsedBullets: [
+        "Also other stuff",
+        "Also other stuff",
       ],
       img: "google.svg"
     },
@@ -83,7 +92,7 @@ export default {
       ],
       descriptors: ["You're reading it!"],
       bullets: [
-        {text: "Animations for the web while still styled for print"},
+        "Animations for the web while still styled for print",
       ],
       video: "resume.webm"
     },
@@ -98,7 +107,7 @@ export default {
       ],
       descriptors: ["Conway's Game of Life simulator"],
       bullets: [
-        {text: "App Academy pure JavaScript game project"},
+        "App Academy pure JavaScript game project",
         // "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
       ],
       video: "constellations.webm"
@@ -111,7 +120,7 @@ export default {
       ],
       descriptors: ["Event ticketing app built in Rails and React"],
       bullets: [
-        {text: "App Academy end of course full stack project"},
+        "App Academy end of course full stack project",
         // "Dynamic show filter using ActiveRecord to combine arbitrary " +
         //   "filter options into a single query",
         // "Interactive seat picker for more engaging " +

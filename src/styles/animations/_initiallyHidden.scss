@@ -1,6 +1,10 @@
 @import "stepAnimate";
 
 main {
+  .initially-hidden {
+    opacity: 0;
+  }
+
   @include step-animate(
     ".initially-hidden",
     append(
