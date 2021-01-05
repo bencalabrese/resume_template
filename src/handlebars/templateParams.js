@@ -88,6 +88,11 @@ export default {
       descriptors: ["You're reading it!"],
       collapsedBullets: [
         "Animations for the web while still styled for print",
+        "For fun, it's mostly hand rolled rather than using a framework. " +
+          "Just TS, Sass, and some Handlebars templating.",
+        "Some pretty interesting CSS animations. I used transforms with " +
+          "hidden overflow borders to give the appearance of expanding since " +
+          "reflow properties like height don't animate smoothly."
       ],
       video: "resume.webm"
     },
@@ -104,6 +109,10 @@ export default {
       collapsedBullets: [
         "App Academy pure JavaScript game project",
         "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
+        "Pans infinitely (Theoretically at least. It'll overflow eventually " +
+          "but it would take a while.)",
+        "Added my own wrinkle of letting users add new dots to the board " +
+          "mid-animation"
       ],
       video: "constellations.webm"
     },
@@ -116,6 +125,7 @@ export default {
       descriptors: ["App Academy Rails/React app"],
       collapsedBullets: [
         "App Academy end of course full stack project",
+        "Might take a second to spin up (it's on the Heroku free plan)",
         "Dynamic show filter using ActiveRecord to combine arbitrary " +
           "filter options into a single query",
         "Interactive seat picker for more engaging " +
