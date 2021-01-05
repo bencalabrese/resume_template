@@ -108,7 +108,9 @@ export default {
       descriptors: ["Conway's Game of Life simulator"],
       bullets: [
         "App Academy pure JavaScript game project",
-        // "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
+      ],
+      collapsedBullets: [
+        "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
       ],
       video: "constellations.webm"
     },
@@ -121,10 +123,12 @@ export default {
       descriptors: ["Event ticketing app built in Rails and React"],
       bullets: [
         "App Academy end of course full stack project",
-        // "Dynamic show filter using ActiveRecord to combine arbitrary " +
-        //   "filter options into a single query",
-        // "Interactive seat picker for more engaging " +
-        //   "point-and-click UI"
+      ],
+      collapsedBullets: [
+        "Dynamic show filter using ActiveRecord to combine arbitrary " +
+          "filter options into a single query",
+        "Interactive seat picker for more engaging " +
+          "point-and-click UI"
       ],
       video: "pickup_tix.webm"
     }

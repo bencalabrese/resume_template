@@ -43,6 +43,9 @@
     position: relative;
 
     .info {
+      // This also needs to be relative so we can wrap the absolutely positioned
+      // collapsed bullets.
+      position: relative;
       width: calc(#{$right-col-width} - #{$enclosure-hor-border-and-padding});
     }
 
