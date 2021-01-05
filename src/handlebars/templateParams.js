@@ -44,39 +44,34 @@ export default {
       name: "YouTube",
       descriptors: ["Senior Software Engineer", "July 2019–Present"],
       bullets: [
-        "Tech lead of the YouTube Kids living room app, supporting smart " +
-          "TVs, cable boxes, and streaming dongles",
-        "Designed and led full rewrite of client to use more resilient and " +
-          "performant UI framework",
-        "Initiated and led cross-org project to support Lottie animations on " +
-          "living room devices",
-        "Author of Google-wide best practices on screenshot testing",
-        "Member of Dart readability team, one of ~40 engineers selected " +
-          "across Google based on exceptional code review skills",
+        "Tech lead of the YouTube Kids smart TV app, setting its technical " +
+          "direction, collaborating with PM/UX, and mentoring more junior " +
+          "engineers",
+        "Expanded reach by X million DAUs, including launches on Apple TV, " +
+          "Fire TV, and Virgin Media",
+        "Drove cross-YouTube projects such as supporting Lottie animations " +
+          "on living room devices",
+        "Thrived and innovated while working with complex constraints such " +
+          "as limited user input mechanisms and low memory/compute devices",
+        "Shepherded Google wide code health as author of best practices on " +
+          "screenshot testing and as one of ~40 engineers selected for the " +
+          "Dart readability team based on exceptional code reviews",
       ],
-      collapsedBullets: [
-        "Also other stuff",
-        "Also other stuff",
-      ],
+      collapsedBullets: [],
       img: "google.svg"
     },
     {
       name: "Google",
       descriptors: ["Software Engineer", "Sept. 2016–July 2019"],
       bullets: [
-        "Led frontend development on multiple projects, taking them through " +
-          "product design, UX, development, launch, and landing",
+        "Led frontend development on multiple projects from initial design " +
+          "through to launch",
         "Designed key aspects of Greentea, Google's custom CRM, including " +
-          "integration with the support ticket system and tracking of " +
-          "customer centric metrics used by 20k ad sellers",
+          "integration with the support ticket system",
         "Co-owner of custom configuration language used to power all tables, " +
           "forms, and charts in Google Ads and Greentea",
-
         ],
-      collapsedBullets: [
-        "Also other stuff",
-        "Also other stuff",
-      ],
+      collapsedBullets: [],
       img: "google.svg"
     },
   ],
@@ -91,7 +86,7 @@ export default {
         }
       ],
       descriptors: ["You're reading it!"],
-      bullets: [
+      collapsedBullets: [
         "Animations for the web while still styled for print",
       ],
       video: "resume.webm"
@@ -106,10 +101,8 @@ export default {
         }
       ],
       descriptors: ["Conway's Game of Life simulator"],
-      bullets: [
-        "App Academy pure JavaScript game project",
-      ],
       collapsedBullets: [
+        "App Academy pure JavaScript game project",
         "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
       ],
       video: "constellations.webm"
@@ -120,11 +113,9 @@ export default {
         { name: "Live", url: "https://pickup-tix.herokuapp.com/" },
         { name: "GitHub", url: "https://github.com/bencalabrese/pickup_tix/" }
       ],
-      descriptors: ["Event ticketing app built in Rails and React"],
-      bullets: [
-        "App Academy end of course full stack project",
-      ],
+      descriptors: ["App Academy Rails/React app"],
       collapsedBullets: [
+        "App Academy end of course full stack project",
         "Dynamic show filter using ActiveRecord to combine arbitrary " +
           "filter options into a single query",
         "Interactive seat picker for more engaging " +
