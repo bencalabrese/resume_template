@@ -58,7 +58,7 @@ export default {
           "Dart readability team based on exceptional code reviews",
       ],
       collapsedBullets: [],
-      img: "google.svg"
+      img: "youtube.svg"
     },
     {
       name: "Google",
