@@ -55,7 +55,7 @@ export default {
           "as limited user input mechanisms and low memory/compute devices",
         "Shepherded Google wide code health as author of best practices on " +
           "screenshot testing and as one of ~40 engineers selected for the " +
-          "Dart readability team based on exceptional code reviews",
+          "Dart readability team",
       ],
       collapsedBullets: [],
       img: "youtube.svg"
@@ -66,10 +66,10 @@ export default {
       bullets: [
         "Led frontend development on multiple projects from initial design " +
           "through to launch",
-        "Designed key aspects of Greentea, Google's custom CRM, including " +
-          "integration with the support ticket system",
+        "Designed key aspects of Connect Sales, Google's custom CRM, " +
+          "including integration with the support ticket system",
         "Co-owner of custom configuration language used to power all tables, " +
-          "forms, and charts in Google Ads and Greentea",
+          "forms, and charts in Google Ads and Connect Sales",
         ],
       collapsedBullets: [],
       img: "google.svg"
@@ -107,7 +107,7 @@ export default {
       ],
       descriptors: ["Conway's Game of Life simulator"],
       collapsedBullets: [
-        "App Academy pure JavaScript game project",
+        "Pure JavaScript game written at App Academy",
         "HTML5 canvas rendering with controls for pan, zoom, and cycle speed",
         "Pans infinitely (Theoretically at least. It'll overflow eventually " +
           "but it would take a while.)",
@@ -122,9 +122,9 @@ export default {
         { name: "Live", url: "https://pickup-tix.herokuapp.com/" },
         { name: "GitHub", url: "https://github.com/bencalabrese/pickup_tix/" }
       ],
-      descriptors: ["App Academy Rails/React app"],
+      descriptors: ["Rails/React event ticketing app"],
       collapsedBullets: [
-        "App Academy end of course full stack project",
+        "Full stack, end of course project for App Academy",
         "Might take a second to spin up (it's on the Heroku free plan)",
         "Dynamic show filter using ActiveRecord to combine arbitrary " +
           "filter options into a single query",
