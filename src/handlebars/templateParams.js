@@ -35,7 +35,7 @@ export default {
     { name: "Ruby", icon: "skill_icons/ruby.svg", skillLevel: 3 },
     { name: "Rails", icon: "skill_icons/rails.svg", skillLevel: 3 },
     { name: "Git", icon: "skill_icons/git.svg", skillLevel: 3 },
-    { name: "SQL", icon: "skill_icons/postgresql.svg", skillLevel: 3 },
+    { name: "SQL", icon: "skill_icons/sql.svg", skillLevel: 3 },
     { name: "Python", icon: "skill_icons/python.svg", skillLevel: 2 },
     { name: "AWS", icon: "skill_icons/aws.svg", skillLevel: 2 }
   ],
