@@ -1,7 +1,10 @@
+$margin: 1in;
+
 body {
   background-color: darkorange;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1in;
+  margin: $margin;
+  min-width: $page-width + $margin * 2;
 }
