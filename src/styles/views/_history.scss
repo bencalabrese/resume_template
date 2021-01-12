@@ -41,6 +41,7 @@
   .history-chunk {
     flex-grow: 1;
     position: relative;
+    overflow: hidden;
 
     .info {
       // This also needs to be relative so we can wrap the absolutely positioned
