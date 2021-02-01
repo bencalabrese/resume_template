@@ -47,7 +47,7 @@ export default {
         "Tech lead of the YouTube Kids smart TV app, setting its technical " +
           "direction, collaborating with PM/UX, and mentoring more junior " +
           "engineers",
-        "Expanded reach by X million DAUs, including launches on Apple TV, " +
+        "Expanded reach by millions of DAUs, including launches on Apple TV, " +
           "Fire TV, and Virgin Media",
         "Drove cross-YouTube projects such as supporting Lottie animations " +
           "on living room devices",
