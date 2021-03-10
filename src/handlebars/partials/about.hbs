@@ -3,8 +3,7 @@
   <p>{{phone}}</p>
   <p>{{email}}</p>
   <div class="profile-links extra-spacing">
-    {{!-- flexbox uses reverse order to maintain styling --}}
-    {{#each (reverse links) }}
+    {{#each links }}
       <a target="_blank" href="{{ url }}">
         <img inline src="{{inlineSvg icon}}"></img>
         <p>{{name}}</p>

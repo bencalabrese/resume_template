@@ -6,15 +6,15 @@ export default {
     location: "San Mateo, CA",
     links: [
       {
+        name: "Github",
+        icon: "github.svg",
+        url: "https://github.com/bencalabrese"
+      },
+      {
         name: "LinkedIn",
         icon: "linkedin.svg",
         url: "https://www.linkedin.com/in/bcalabrese/"
       },
-      {
-        name: "Github",
-        icon: "github.svg",
-        url: "https://github.com/bencalabrese"
-      }
     ]
   },
   skills: [
