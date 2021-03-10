@@ -36,16 +36,19 @@
       height: 160px;
     }
 
+    .pronouns {
+      padding-bottom: 0.0625in;
+    }
+
     .profile-links {
-      padding-top: 0.0875in;
+      padding-top: 0.15in;
       display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap-reverse;
+      justify-content: space-between;
+      line-height: 16px;
 
       a {
         display: flex;
         align-items: center;
-        width: 70px;
         padding-left: 0.75em;
       }
 

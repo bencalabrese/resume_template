@@ -1,14 +1,10 @@
 export default {
   contact: {
+    pronouns: "He/Him/His",
     phone: "(619) 208-8943",
     email: "bencalabrese@gmail.com",
     location: "San Mateo, CA",
     links: [
-      {
-        name: "Portfolio",
-        icon: "folder.svg",
-        url: "http://www.bencalabrese.com"
-      },
       {
         name: "LinkedIn",
         icon: "linkedin.svg",
