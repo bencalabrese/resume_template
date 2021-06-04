@@ -16,15 +16,17 @@ setTimeout(() => {
   body.classList.remove("force-no-transition");
 }, 300);
 
-new Coordinator();
-
-const interactionInstructions = new Instructions(".left .instructions");
-const printInstructions = new Instructions(".right .instructions");
-
-setTimeout(() => {
-  interactionInstructions.in();
-}, 2000);
-
-setTimeout(() => {
-  printInstructions.in();
-}, 2700);
+document.fonts.ready.then(() => {
+  new Coordinator();
+  
+  const interactionInstructions = new Instructions(".left .instructions");
+  const printInstructions = new Instructions(".right .instructions");
+  
+  setTimeout(() => {
+    interactionInstructions.in();
+  }, 2000);
+  
+  setTimeout(() => {
+    printInstructions.in();
+  }, 2700);
+});

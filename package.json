@@ -14,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "@types/css-font-loading-module": "0.0.4",
     "@types/lodash": "^4.14.123",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
